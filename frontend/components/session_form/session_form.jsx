@@ -40,11 +40,11 @@ class sessionForm extends React.Component{
                 {this.renderErrors()}
                 <label>Username:
                     <br/>
-                    <input type="text" onChange={this.update('username')}/>
+                    <input type="text" onChange={this.update('username')} placeholder='Username'/>
                 </label>
                 <br/>
                 <label >Password: <br/>
-                    <input type="password" onChange={this.update('password')}/>
+                    <input type="password" onChange={this.update('password')} placeholder='Password'/>
                 </label>
                 <br/>
                 <input type="submit" value={this.props.formType}/>

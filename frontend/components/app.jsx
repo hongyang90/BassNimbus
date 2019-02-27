@@ -8,10 +8,10 @@ import SplashNav from './splashnav/splash_nav_container';
 const App = () => (
     <div>
         <Modal/>
-        <header>
-            <h1>BassNimbus</h1>
-            <SplashNav />
-        </header>
+        <SplashNav />
+       
+            
+     
 
         {/* <LoginFormContainer />
         <SignupFormContainer /> */}

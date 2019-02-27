@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import sessionForm from './session_form';
 import { signup } from '../../actions/session_actions';
 import React from 'react';
+import { closeModal, otherForm } from '../../actions/modal_actions';
 
 
 const msp = state => ({
