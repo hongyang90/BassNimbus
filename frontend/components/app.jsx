@@ -1,22 +1,18 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import SignupFormContainer from '../components/session_form/signup_form_container';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import Modal from './modal/modal_container';
-import SplashNav from './splashnav/splash_nav_container';
+// import SplashNav from './splashnav/splash_nav_container';
+import SplashContainer from './splash/splash_container';
+import { Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 
 const App = () => (
-    <div>
+    <>
         <Modal/>
-        <SplashNav />
+        <Route path='/' component={SplashContainer}/>
        
-            
      
-
-        {/* <LoginFormContainer />
-        <SignupFormContainer /> */}
-     
-    </div>
+    </>
 )
 
 export default App;

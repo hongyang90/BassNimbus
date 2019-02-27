@@ -33,21 +33,22 @@ class sessionForm extends React.Component{
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                Welcome to BassNimbus! <br/>
+                <p>Welcome to BassNimbus!</p>  <br/>
                 <div onClick={this.props.closeModal} className="close-x">X</div>
 
                 <br/>
                 {this.renderErrors()}
-                <label>Username:
+                
                     <br/>
-                    <input type="text" onChange={this.update('username')} placeholder='Username'/>
-                </label>
+                    <input type="text" onChange={this.update('username')} placeholder='Your Username'/>
+                
                 <br/>
-                <label >Password: <br/>
-                    <input type="password" onChange={this.update('password')} placeholder='Password'/>
-                </label>
+                    <input type="password" onChange={this.update('password')} placeholder='Your Password'/>
+                
                 <br/>
                 <input type="submit" value={this.props.formType}/>
+                <br/>
+                <input type="submit" value='Demo User'/>
             </form>
 
         )

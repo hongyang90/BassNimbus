@@ -1,0 +1,158 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+     background-color: #f2f2f2;
+    
+ }
+ 
+ .modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(192, 186, 186, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 30%;
+  height: 80%;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  background-image: image-url('soundcloudorange.png');
+  background-size: 50% 40%; 
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+}
+
+.modal-child input {
+    height: 30px;
+    width: 200px;
+    font-size: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+ .close-x {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   color: black;
+ }
+
+ .splash-nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: absolute;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     margin-top: 15px;
+     height: 40px;
+     width: 80%;
+     margin-left: 10%;
+ }
+
+.splashnavleft {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+ }
+
+ .logo {
+   height: 20px;
+   width: 50px;
+   background-image: image-url('whitecloud.png');
+ }
+
+ .splashnavright {
+     display: flex;
+    align-items: center;
+ }
+
+ .splashnavright button {
+    font-family: 'Open Sans', sans-serif;
+   color: white;
+   font-size: 14px;
+   font-weight: 100;
+   height: 30px;
+  background-color: #f50;
+  border-radius: 3px;
+  margin: 5px 10px 0px 0px;
+  cursor: pointer;
+ }
+
+ .splash-banner {
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    height: 450px;
+    border-top: 5px solid #f50;
+    background-color: blueviolet;
+    background-image: image-url('coverimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .splash-banner h1{
+  font-size: 35px;
+  width: 60%;
+  padding: 15px;
+  text-align: center;
+ }
+
+ .splash-banner h2 {
+   width: 45%;
+   text-align: center;
+   padding: 10px;
+  letter-spacing: 1px;
+  line-height: normal;
+ }
+
+.splash-banner button {
+    font-family: 'Open Sans', sans-serif;
+   color: white;
+   font-size: 16px;
+   font-weight: 50;
+   height: 45px;
+   width: 200px;
+  background-color: #f50;
+  border-radius: 3px;
+  margin: 5px 10px 0px 0px;
+  cursor: pointer;
+  margin: 10px
+} 
