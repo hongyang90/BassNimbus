@@ -8,7 +8,7 @@ const SplashNav = ({ currentUser, logout, openModal }) => {
                 <h3>BassNimbus</h3>
             </div>
             <div className='splashnavright'> 
-                <button onClick={() => openModal('login')}>Sign in</button>
+                <button className='splashsignin' onClick={() => openModal('login')}>Sign in</button>
                 <button onClick={() => openModal('signup')}>Create account</button>
             </div>
         </div>

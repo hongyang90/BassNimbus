@@ -90,7 +90,9 @@
  .logo {
    height: 20px;
    width: 50px;
+   background-size: cover;
    background-image: image-url('whitecloud.png');
+   margin: 0px 5px 0px 5px;
  }
 
  .splashnavright {
@@ -120,10 +122,10 @@
     height: 450px;
     border-top: 5px solid #f50;
     background-color: blueviolet;
-    background-image: image-url('coverimg.jpg');
+    background-image: image-url('edm.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 40%;
+    background-position: 50% 50%;
     color: white;
     font-family: 'Open Sans', sans-serif;
  }
@@ -149,10 +151,14 @@
    font-size: 16px;
    font-weight: 50;
    height: 45px;
-   width: 200px;
+   width: 225px;
   background-color: #f50;
   border-radius: 3px;
   margin: 5px 10px 0px 0px;
   cursor: pointer;
   margin: 10px
 } 
+
+ button.splashsignin {
+  background-color: transparent;
+}

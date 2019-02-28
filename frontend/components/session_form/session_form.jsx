@@ -5,6 +5,7 @@ class sessionForm extends React.Component{
         super(props);
         this.state = {username: '', password: ''};
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleSubmit(e) {
@@ -12,6 +13,8 @@ class sessionForm extends React.Component{
         const user = Object.assign({}, this.state);
         this.props.action(user);
     }
+
+
 
     update(field) {
         return e => this.setState({[field]: e.currentTarget.value});
@@ -48,7 +51,7 @@ class sessionForm extends React.Component{
                 <br/>
                 <input type="submit" value={this.props.formType}/>
                 <br/>
-                <input type="submit" value='Demo User'/>
+                <input type="submit" value='Demo User' onClick={this.handleClick} /> 
             </form>
 
         )
