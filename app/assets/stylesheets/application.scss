@@ -66,6 +66,10 @@
    color: black;
  }
 
+  .splash {
+    display: flex;
+    justify-content: center;
+  }
  .splash-nav {
      display: flex;
      justify-content: space-between;
@@ -74,8 +78,7 @@
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      margin-top: 15px;
      height: 40px;
-     width: 80%;
-     margin-left: 10%;
+     width: 1240px;
  }
 
 .splashnavleft {
@@ -85,6 +88,7 @@
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
+    margin-left: 15px;
  }
 
  .logo {
@@ -117,32 +121,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin-left: 10%;
-    height: 450px;
+    width: 1240px;
+    min-height: 450px;
     border-top: 5px solid #f50;
     background-color: blueviolet;
-    background-image: image-url('edm.jpg');
+    background-image: image-url('3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
-    color: white;
+    background-position: 50% 30%;
+    color: black;
     font-family: 'Open Sans', sans-serif;
  }
 
  .splash-banner h1{
+   display: flex;
+   flex-wrap: wrap;
   font-size: 35px;
-  width: 60%;
-  padding: 15px;
+  width: 45%;
+  height: 25%;
   text-align: center;
+  letter-spacing: .3px;
+  line-height: normal;
+  margin-top: 10px;
  }
 
  .splash-banner h2 {
    width: 45%;
+   height: 10%;
    text-align: center;
-   padding: 10px;
-  letter-spacing: 1px;
+  
+  letter-spacing: .75px;
   line-height: normal;
+  margin-bottom: 30px
  }
 
 .splash-banner button {
@@ -156,7 +166,7 @@
   border-radius: 3px;
   margin: 5px 10px 0px 0px;
   cursor: pointer;
-  margin: 10px
+  margin-bottom: 10px;
 } 
 
  button.splashsignin {

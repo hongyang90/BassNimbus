@@ -9,7 +9,8 @@ class Splash extends React.Component {
                 < SplashNav />
                 <div className='splash-banner'>
                     <h1>What's next in EDM music is first on BassNimbus</h1>
-                    <h2>Upload your first track and begin your journey. BassNimbus gives you space to create, find your fans, and connect with other artists.</h2>
+                    <h2>Upload your first track and begin your journey.</h2>
+                    <h3></h3>
                     <button onClick={() => this.props.openModal('signup')}>Start uploading today</button>
                     
                 </div>

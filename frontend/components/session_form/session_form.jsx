@@ -14,7 +14,10 @@ class sessionForm extends React.Component{
         this.props.action(user);
     }
 
-
+    handleClick(e) {
+        e.preventDefault();
+        this.props.login({username: 'demouser', password: 'password'});
+    }
 
     update(field) {
         return e => this.setState({[field]: e.currentTarget.value});
@@ -22,13 +25,13 @@ class sessionForm extends React.Component{
 
     renderErrors() {
         return (
-            <ul>
+            <>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
-            </ul>
+            </>
         );
     }
 
@@ -36,11 +39,11 @@ class sessionForm extends React.Component{
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <p>Welcome to BassNimbus!</p>  <br/>
+                <p>Welcome to BassNimbus!</p> 
                 <div onClick={this.props.closeModal} className="close-x">X</div>
 
-                <br/>
-                {this.renderErrors()}
+                
+                <p>{this.renderErrors()}</p>
                 
                     <br/>
                     <input type="text" onChange={this.update('username')} placeholder='Your Username'/>
