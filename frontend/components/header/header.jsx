@@ -14,11 +14,12 @@ class Header extends React.Component {
             <div className='header'>
                 <Link to='/discover' ><div className='headerlogo'></div></Link>
                 <div className='fill'></div>
+                <div className='headerupload'>Upload</div>
                 <div className='username'><p>{user.username}</p></div>
-                <div className='dropdown'>
-                    <p onClick={this.dropdown} className='drp-btn'>gear</p>
-                    <div id='myDropdown' className='dropdown-content'>
-                        <p onClick={this.props.logout} >Logout</p>
+                <div className='dropdown' onClick={this.dropdown} >
+                    <p className='drp-btn'><i class="fas fa-ellipsis-h"></i></p>
+                    <div onClick={this.props.logout} id='myDropdown' className='dropdown-content'>
+                        <p>Sign Out</p>
                     </div>
                 </div>
                 
