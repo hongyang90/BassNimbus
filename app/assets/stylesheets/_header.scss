@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  height: 46px;
+  background-color: #323332;
+  color: #CBCCCB;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.headerlogo {
+  display: flex;
+  align-items: center;
+  background-image: image-url('headernav.jpg');
+  background-size: cover;
+  height: 46px;
+  width: 69px;
+  background-position-y: 50%;
+
+}
+
+.username {
+  
+    width: 85px;
+}
+
+.fill{
+    display: flex;
+    justify-content: center;
+    height: 46px;
+    width: 800px;
+
+}
