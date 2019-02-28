@@ -11,12 +11,16 @@ class sessionForm extends React.Component{
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.action(user);
+        this.props.action(user)
+            .then(() => this.props.closeModal());
     }
 
-    handleClick(e) {
+    handleDemo(e) {
         e.preventDefault();
-        this.props.login({username: 'demouser', password: 'password'});
+        this.props.login({username: 'demouser', password: 'password'})
+            .then(() => this.props.closeModal());
+        
+
     }
 
     update(field) {
@@ -27,9 +31,9 @@ class sessionForm extends React.Component{
         return (
             <>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <div key={`error-${i}`}>
                         {error}
-                    </li>
+                    </div>
                 ))}
             </>
         );
@@ -39,22 +43,19 @@ class sessionForm extends React.Component{
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <p>Welcome to BassNimbus!</p> 
                 <div onClick={this.props.closeModal} className="close-x">X</div>
-
-                
-                <p>{this.renderErrors()}</p>
+                <p>Welcome to BassNimbus!</p> 
+                <p className='modalerrors'>{this.renderErrors()}</p>
                 
                     <br/>
-                    <input type="text" onChange={this.update('username')} placeholder='Your Username'/>
+                    <input className='modalinput' type="text" onChange={this.update('username')} placeholder='Your Username'/>
+                    <input className='modalinput' type="password" onChange={this.update('password')} placeholder='Your Password'/>
                 
                 <br/>
-                    <input type="password" onChange={this.update('password')} placeholder='Your Password'/>
                 
-                <br/>
-                <input type="submit" value={this.props.formType}/>
-                <br/>
-                <input type="submit" value='Demo User' onClick={this.handleClick} /> 
+                    <input className='modalsubmit' type="submit" value={this.props.formType}/>
+                    <input className='modalsubmit' type="submit" value='Demo User' onClick={this.handleDemo} /> 
+
             </form>
 
         )

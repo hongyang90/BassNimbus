@@ -1,3 +1,7 @@
+.header div:hover {
+  color: white;
+  cursor: pointer;
+}
 .header {
   display: flex;
   height: 46px;
@@ -8,28 +12,38 @@
   font-family: 'Open Sans', sans-serif;
 
 
-}
 
-.headerlogo {
-  display: flex;
-  align-items: center;
-  background-image: image-url('headernav.jpg');
-  background-size: cover;
-  height: 46px;
-  width: 69px;
-  background-position-y: 50%;
 
-}
-
-.username {
-  
-    width: 85px;
-}
-
-.fill{
+  .headerlogo {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    background-image: image-url('headernav.jpg');
+    background-size: cover;
     height: 46px;
-    width: 800px;
+    width: 69px;
+    background-position-y: 50%;
+
+  }
+
+  .username {
+    
+      width: 85px;
+  }
+
+  .fill{
+      display: flex;
+      justify-content: center;
+      height: 46px;
+      width: 800px;
+
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-flex;
+  }
+
+
+
 
 }

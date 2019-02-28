@@ -44,19 +44,56 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   background-image: image-url('soundcloudorange.png');
-  background-size: 50% 40%; 
+  background-size: 40% 40%; 
   background-repeat: no-repeat;
   background-position: top;
   text-align: center;
 }
 
-.modal-child input {
+.modal-child .modalinput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
     height: 30px;
     width: 200px;
     font-size: 100%;
     margin: 10px;
     text-align: center;
 }
+
+.modal-child .modalsubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    height: 35px;
+    width: 200px;
+    font-size: 100%;
+    margin: 10px;
+    text-align: center;
+    background-color: #f50;
+    color: white;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.modal-child form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modalerrors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+
 
  .close-x {
    position: absolute;
@@ -66,20 +103,21 @@
    color: black;
  }
 
-  .splash {
+.splash {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-nav {
     display: flex;
-    justify-content: center;
-  }
- .splash-nav {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     position: absolute;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     margin-top: 15px;
-     height: 40px;
-     width: 1240px;
- }
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 15px;
+    height: 40px;
+    width: 1240px;
+}
 
 .splashnavleft {
     display: flex;
@@ -91,20 +129,20 @@
     margin-left: 15px;
  }
 
- .logo {
-   height: 20px;
-   width: 50px;
-   background-size: cover;
-   background-image: image-url('whitecloud.png');
-   margin: 0px 5px 0px 5px;
- }
+.logo {
+  height: 20px;
+  width: 50px;
+  background-size: cover;
+  background-image: image-url('whitecloud.png');
+  margin: 0px 5px 0px 5px;
+}
 
- .splashnavright {
-     display: flex;
-    align-items: center;
- }
+.splashnavright {
+    display: flex;
+  align-items: center;
+}
 
- .splashnavright button {
+.splashnavright button {
     font-family: 'Open Sans', sans-serif;
    color: white;
    font-size: 14px;
@@ -114,9 +152,9 @@
   border-radius: 3px;
   margin: 5px 10px 0px 0px;
   cursor: pointer;
- }
+}
 
- .splash-banner {
+.splash-banner {
    display: flex;
     justify-content: center;
     flex-direction: column;
@@ -124,16 +162,15 @@
     width: 1240px;
     min-height: 450px;
     border-top: 5px solid #f50;
-    background-color: blueviolet;
     background-image: image-url('3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 30%;
     color: black;
     font-family: 'Open Sans', sans-serif;
- }
+}
 
- .splash-banner h1{
+.splash-banner h1{
    display: flex;
    flex-wrap: wrap;
   font-size: 35px;
@@ -143,9 +180,9 @@
   letter-spacing: .3px;
   line-height: normal;
   margin-top: 10px;
- }
+}
 
- .splash-banner h2 {
+.splash-banner h2 {
    width: 45%;
    height: 10%;
    text-align: center;
@@ -153,7 +190,7 @@
   letter-spacing: .75px;
   line-height: normal;
   margin-bottom: 30px
- }
+}
 
 .splash-banner button {
     font-family: 'Open Sans', sans-serif;
@@ -169,7 +206,7 @@
   margin-bottom: 10px;
 } 
 
- button.splashsignin {
+button.splashsignin {
   background-color: transparent;
 }
 

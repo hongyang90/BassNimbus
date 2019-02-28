@@ -6,9 +6,13 @@ import Root from './components/root';
 
 // testing
 import * as session_actions from './actions/session_actions';
+import * as util from './util/session_api_util';
+
 window.login = session_actions.login;
 window.logout = session_actions.logout;
 window.signup = session_actions.signup;
+window.cs = util.createSession;
+window.ds = util.destroySession;
 // testing
 
 document.addEventListener('DOMContentLoaded', () => {
