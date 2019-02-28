@@ -20,6 +20,11 @@ const logoutCurrentUser = () => ({
 
 });
 
+const clearSessionErrors = () => ({
+    type: CLEAR_ERRORS,
+    errors: []
+});
+
 export const login = user => dispatch => (
     SessionAPIUtil.createSession(user)
     .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)))
