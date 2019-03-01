@@ -52,7 +52,7 @@
       display: flex;
       justify-content: center;
       height: 46px;
-      width: auto; 
+      width: 1000px; 
       // width 1050 with logo, user , and gear
 
   }
@@ -82,6 +82,10 @@
     font-size: 12px;
     right: 0px;
 
+  }
+
+  .dropdown-content:hover {
+    background: rgba(78, 78, 78, 1);
   }
 
 

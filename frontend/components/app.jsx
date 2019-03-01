@@ -7,13 +7,14 @@ import SplashContainer from './splash/splash_container';
 import { Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 import {ProtectedRoute, AuthRoute} from '../util/route_util';
 import HeaderContainer from './header/header_container';
+import Discover from './discover/discover';
 
 const App = () => (
     <>
         <Modal/>
         <AuthRoute path='/' component={SplashContainer}/>
         <ProtectedRoute path='/discover' component={HeaderContainer} />
-     
+        <ProtectedRoute path='/discover' component={Discover}/>
     </>
 )
 

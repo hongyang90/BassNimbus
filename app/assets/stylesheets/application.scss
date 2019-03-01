@@ -77,6 +77,12 @@
     border-radius: 5px;
 }
 
+.modal-child .modalinput {
+  border-radius: 5px;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+
 .modal-child form {
   display: flex;
   flex-direction: column;
@@ -84,6 +90,8 @@
   align-items: center;
   
 }
+
+ 
 
 .modalerrors {
   display: flex;
@@ -103,112 +111,10 @@
    color: black;
  }
 
-.splash {
-  display: flex;
-  justify-content: center;
-}
 
-.splash-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 15px;
-    height: 40px;
-    width: 1240px;
-}
+ 
 
-.splashnavleft {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-left: 15px;
- }
-
-.logo {
-  height: 20px;
-  width: 50px;
-  background-size: cover;
-  background-image: image-url('whitecloud.png');
-  margin: 0px 5px 0px 5px;
-}
-
-.splashnavright {
-    display: flex;
-  align-items: center;
-}
-
-.splashnavright button {
-    font-family: 'Open Sans', sans-serif;
-   color: white;
-   font-size: 14px;
-   font-weight: 100;
-   height: 30px;
-  background-color: #f50;
-  border-radius: 3px;
-  margin: 5px 10px 0px 0px;
-  cursor: pointer;
-}
-
-.splash-banner {
-   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 1240px;
-    min-height: 450px;
-    border-top: 5px solid #f50;
-    background-image: image-url('3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 30%;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.splash-banner h1{
-   display: flex;
-   flex-wrap: wrap;
-  font-size: 35px;
-  width: 45%;
-  height: 25%;
-  text-align: center;
-  letter-spacing: .3px;
-  line-height: normal;
-  margin-top: 10px;
-}
-
-.splash-banner h2 {
-   width: 45%;
-   height: 10%;
-   text-align: center;
-  
-  letter-spacing: .75px;
-  line-height: normal;
-  margin-bottom: 30px
-}
-
-.splash-banner button {
-    font-family: 'Open Sans', sans-serif;
-   color: white;
-   font-size: 16px;
-   font-weight: 50;
-   height: 45px;
-   width: 225px;
-  background-color: #f50;
-  border-radius: 3px;
-  margin: 5px 10px 0px 0px;
-  cursor: pointer;
-  margin-bottom: 10px;
-} 
-
-button.splashsignin {
-  background-color: transparent;
-}
+@import '_splash.scss';
 
 // Header (navbar)
-@import '_header.scss'
+@import '_header.scss';
