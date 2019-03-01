@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 
-.headerlogo:hover , .username:hover, .headerupload:hover {
+.headerlogo:hover , .username:hover, .headerupload:hover, .header-home:hover {
   color: white;
 }
 
@@ -35,6 +35,15 @@
 
   }
 
+  .header-home {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    border-right: 0.5px solid black;
+    height: 46px;
+    align-items: center;
+  }
+
   .headerupload {
     width: 65px;
   }
@@ -52,7 +61,7 @@
       display: flex;
       justify-content: center;
       height: 46px;
-      width: 975px; 
+      width: 875px; 
       // width 1050 with logo, user , and gear
 
   }
