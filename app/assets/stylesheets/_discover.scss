@@ -11,8 +11,29 @@
 
 
     .genre {
-        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
         width: 100%;
+    }
+    
+    .genre-title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        height: 50px;
+        width: 95%;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .genre-songs {
         border-bottom: 0.3mm solid lightgray;
-    }    
+        height: 85%;
+        width: 95%;
+        margin-bottom: 15px;
+        background-color: gray;
+    }
 }

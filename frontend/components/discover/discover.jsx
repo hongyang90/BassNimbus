@@ -17,7 +17,10 @@ class Discover extends React.Component {
                     <div className='discover-content'>
                         <div className='genre'>
                             <div className='genre-title'> 
-                                <span></span>
+                                <span>Featured</span>
+                            </div>
+                            <div className='genre-songs'>
+
                             </div>
                         </div>
                     </div>
