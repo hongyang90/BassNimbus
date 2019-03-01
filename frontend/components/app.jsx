@@ -16,8 +16,8 @@ const App = () => (
     <>
         <Modal/>
         <AuthRoute path='/' component={SplashContainer}/>
-        <Route path='/discover' component={HeaderContainer} />
-        <Route path='/discover' component={Discover}/>
+        <ProtectedRoute path='/discover' component={HeaderContainer} />
+        <ProtectedRoute path='/discover' component={Discover}/>
         <Route path='/users/:userId' component={UserShow}/>
     </>
 )

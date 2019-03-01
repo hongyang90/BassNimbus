@@ -17,7 +17,7 @@ class sessionForm extends React.Component{
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.login({username: 'demouser', password: 'password'})
+        this.props.login({username: 'Demo-user', password: 'password'})
             .then(() => this.props.closeModal());
         
 
