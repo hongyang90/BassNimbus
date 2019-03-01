@@ -15,11 +15,12 @@ import UserShow from './user/user_show';
 const App = () => (
     <>
         <Modal/>
-        <AuthRoute path='/' component={SplashContainer}/>
-        <ProtectedRoute path='/discover' component={HeaderContainer} />
-        <ProtectedRoute path='/discover' component={Discover}/>
+        <AuthRoute exact path='/' component={SplashContainer}/>
+        <ProtectedRoute exact path='/discover' component={HeaderContainer} />
+        <ProtectedRoute exact path='/discover' component={Discover}/>
         <Route path='/users/:userId' component={UserShow}/>
     </>
 )
 
 export default App;
+

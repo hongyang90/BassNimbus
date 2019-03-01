@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Layout from '../layout/layout';
 
 class UserShow extends React.Component {
 
@@ -14,12 +14,12 @@ class UserShow extends React.Component {
                 <div className='show-banner'>
                     <div className='profile-pic'>
                         <div className='user-img'></div>
-                        <div><input className='inputfile' type="file-upload" type='file'/>
+                        <div>
                             {/* <p>Update photo</p> */}
                         </div>
                     </div>
                     <div className='display-name'>
-                        <h2>text</h2>
+                        <h2>Username Goes Here</h2>
                     </div>
                 </div>
                 <div className='show-content'>

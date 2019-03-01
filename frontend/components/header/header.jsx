@@ -7,7 +7,7 @@ class Header extends React.Component {
 
         window.addEventListener('click', (e) => {
             const btn = document.getElementById("myDropdown");
-            if (!e.target.matches('.dropdown') || e.target.matches('.fas fa-ellipsis-h')) {
+            if (!e.target.matches('.dropdown') && !e.target.matches('.fa-ellipsis-h')) {
                 if (btn.classList.contains('show')) {
                     btn.classList.remove('show');
                 }
