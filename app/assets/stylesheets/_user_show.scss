@@ -1,0 +1,78 @@
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-banner {
+    display: flex;
+    width: 1240px;
+    height: 260px;
+    background-image: linear-gradient(to right, #4e4c57, #9799a3)
+}
+
+.profile-pic {
+    height: 200px;
+    width: 200px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.user-img {
+     height: 200px;
+    width: 200px;
+ background-image: black;
+}
+
+.display-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    background: black;
+    color: white;
+    margin-top: 30px;
+
+}
+
+
+.inputfile:hover {
+    cursor: pointer;
+}
+
+.show-content {
+    display: flex;
+    width: 1240px;
+    height: 2000px;
+    background-color: white;
+}
+
+
+.show .labels {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 50px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 0.3mm solid lightgray;
+}
+
+.show span {
+    font-size: 18px;
+    color: #f50;
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 0.3mm solid #f50;
+    
+}
+

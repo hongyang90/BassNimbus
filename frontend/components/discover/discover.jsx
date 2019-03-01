@@ -8,7 +8,9 @@ class Discover extends React.Component {
 
         return (
             <div className='discover'>
-                Hello
+                <div className='discover-content'>
+
+                </div>
             </div>
         )
     }

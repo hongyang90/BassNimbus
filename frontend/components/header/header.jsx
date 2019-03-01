@@ -26,9 +26,9 @@ class Header extends React.Component {
                 <Link to='/discover' ><div className='headerlogo'></div></Link>
                 <div className='fill'></div>
                 <div className='headerupload'>Upload</div>
-                <div className='username'><p>{user.username}</p></div>
+                <Link to={`/users/${user.id}`} ><div className='username'><p>{user.username}</p></div></Link>
                 <div className='dropdown' onClick={this.dropdown} >
-                    <p className='drp-btn'><i className="fas fa-ellipsis-h"></i></p>
+                    <p className='drp-btn' ><i className="fas fa-ellipsis-h"></i></p>
                     <div  id='myDropdown' className='dropdown-content'>
                         <p onClick={this.props.logout}>Sign Out</p>
                     </div>

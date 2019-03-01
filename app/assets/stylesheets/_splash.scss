@@ -53,8 +53,10 @@
    height: 30px;
   background-color: #f50;
   border-radius: 3px;
-  margin: 5px 10px 0px 0px;
+  margin: 5px 20px 0px 0px;
   cursor: pointer;
+  width: 130px;
+  border: none;
 }
 
 .splash-banner {
@@ -107,10 +109,13 @@
   margin: 5px 10px 0px 0px;
   cursor: pointer;
   margin-bottom: 10px;
+  border: none;
 } 
 
 button.splashsignin {
   background-color: transparent;
+  width: 75px;
+  border: .5px solid white;
 }
 
 
