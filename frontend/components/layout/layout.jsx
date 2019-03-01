@@ -5,10 +5,10 @@ import HeaderContainer from '../header/header_container';
 const Layout = (props) => {
 
     return (
-        <div>
+        <>
             <HeaderContainer />
             {props.children}
-        </div>
+        </>
 
     )
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Layout from '../layout/layout';
+
 
 class Discover extends React.Component {
 
@@ -10,15 +12,17 @@ class Discover extends React.Component {
     render() {
 
         return (
-            <div className='discover'>
-                <div className='discover-content'>
-                    <div className='genre'>
-                        <div className='genre-title'> 
-                            <span></span>
+            <Layout >
+                <div className='discover'>
+                    <div className='discover-content'>
+                        <div className='genre'>
+                            <div className='genre-title'> 
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }

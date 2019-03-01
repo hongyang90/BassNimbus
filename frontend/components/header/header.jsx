@@ -24,7 +24,7 @@ class Header extends React.Component {
         return (
             <div className='header'>
                 <Link to='/discover' ><div className='headerlogo'></div></Link>
-                <Link to='discover'><div className='header-home'>Home</div></Link>
+                <Link to='/discover'><div className='header-home'>Home</div></Link>
                 <div className='fill'></div>
                 <div className='headerupload'>Upload</div>
                 <Link to={`/users/${user.id}`} ><div className='username'><p>{user.username}</p></div></Link>
