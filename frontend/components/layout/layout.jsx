@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container';
+import {withRouter} from 'react-router-dom';
 
 
 const Layout = (props) => {
@@ -13,4 +14,4 @@ const Layout = (props) => {
     )
 };
 
-export default Layout;
+export default withRouter(Layout);

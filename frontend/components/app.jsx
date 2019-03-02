@@ -15,7 +15,7 @@ import UserShow from './user/user_show';
 const App = () => (
     <>
         <Modal/>
-        <AuthRoute path='/' component={SplashContainer}/>
+        <AuthRoute exact path='/' component={SplashContainer}/>
         {/* <ProtectedRoute exact path='/discover' component={HeaderContainer} /> */}
         <ProtectedRoute  path='/discover' component={Discover}/>
         <ProtectedRoute path='/users/:userId' component={UserShow}/>

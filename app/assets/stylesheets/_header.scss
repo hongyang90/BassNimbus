@@ -61,7 +61,7 @@
       display: flex;
       justify-content: center;
       height: 46px;
-      width: 873px; 
+      width: 819px; 
       // width 1050 with logo, user , and gear
 
   }
@@ -107,6 +107,11 @@
     background: black;
   }
 
-
+  .header-pic {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 }
 
