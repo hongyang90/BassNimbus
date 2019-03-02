@@ -22,7 +22,7 @@ class UserShow extends React.Component {
                           
                         </div>
                         <div className='display-name'>
-                            <h2>Username Goes Here</h2>
+                            <h2>{user.username}</h2>
                         </div>
                     </div>
                     <div className='show-content'>

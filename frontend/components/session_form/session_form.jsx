@@ -6,6 +6,7 @@ class sessionForm extends React.Component{
         this.state = {username: '', password: ''};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.demoLogin2 = this.demoLogin2.bind(this);
     }
 
     handleSubmit(e) {
@@ -17,10 +18,55 @@ class sessionForm extends React.Component{
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.login({username: 'hunter12', password: 'password'})
-            .then(() => this.props.closeModal());
+
+        
+        setTimeout(() => this.props.login({ username: 'hunter12', password: 'password' })
+            .then(() => this.props.closeModal()), 4000);
+        setTimeout(()=> this.demoLogin2(), 2700);
+        this.demoLogin1();
+        ;
         
 
+    }
+
+    demoLogin1() {
+        let input = document.querySelectorAll(".modalinput")[0];
+        input.select();
+        input.value = '';
+        let text = 'hunter12';
+        let l = text.length;
+        let current = 0;
+        let time = 300;
+        let write_text = function () {
+            input.value += text[current];
+            if (current < l - 1) {
+                current++;
+                setTimeout(function () { write_text() }, time);
+            } else {
+                input.setAttribute('value', input.value);
+            }
+        };
+        setTimeout(function () { write_text(); }, time);
+    }
+
+    demoLogin2() {
+        let input = document.querySelectorAll(".modalinput")[1];
+        input.select();
+        input.value = '';
+        let text = 'password';
+        let l = text.length;
+        let current = 0;
+        let time = 200;
+        let write_text = function () {
+            input.value += text[current];
+            if (current < l - 1) {
+                current++;
+                setTimeout(function () { write_text() }, time);
+            } else {
+                input.setAttribute('value', input.value);
+            }
+        };
+        setTimeout(function () { write_text(); }, time);
     }
 
     update(field) {
