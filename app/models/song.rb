@@ -6,5 +6,5 @@ class Song < ApplicationRecord
     foreign_key: :artist_id,
     class_name: :User
 
-    
+    # add assiciations for pictures and audio files
 end
