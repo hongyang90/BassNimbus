@@ -21,8 +21,8 @@ class sessionForm extends React.Component{
 
         
         setTimeout(() => this.props.login({ username: 'hunter12', password: 'password' })
-            .then(() => this.props.closeModal()), 4000);
-        setTimeout(()=> this.demoLogin2(), 2700);
+            .then(() => this.props.closeModal()), 1800);
+        setTimeout(()=> this.demoLogin2(), 1000);
         this.demoLogin1();
         ;
         
@@ -36,7 +36,7 @@ class sessionForm extends React.Component{
         let text = 'hunter12';
         let l = text.length;
         let current = 0;
-        let time = 300;
+        let time = 100;
         let write_text = function () {
             input.value += text[current];
             if (current < l - 1) {
@@ -56,7 +56,7 @@ class sessionForm extends React.Component{
         let text = 'password';
         let l = text.length;
         let current = 0;
-        let time = 200;
+        let time = 100;
         let write_text = function () {
             input.value += text[current];
             if (current < l - 1) {
