@@ -31,7 +31,7 @@ class sessionForm extends React.Component{
         return (
             <>
                 {this.props.errors.map((error, i) => (
-                    <div key={`error-${i}`}>
+                    <div key={`error-${i}`} >
                         {error}
                     </div>
                 ))}
@@ -43,8 +43,8 @@ class sessionForm extends React.Component{
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div onClick={this.props.closeModal} className="close-x">X</div>
-                <p>Welcome to BassNimbus!</p> 
+                <div onClick={this.props.closeModal} className="close-x"></div>
+                <p className='w'>Welcome to BassNimbus!</p> 
                 <p className='modalerrors'>{this.renderErrors()}</p>
                 
                     <br/>

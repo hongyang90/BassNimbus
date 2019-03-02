@@ -21,12 +21,17 @@
  
  .modal-background {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(192, 186, 186, 0.7);
+  width: 100vw;
+  height: 100vh;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  background: rgba(225, 225, 225, .88);
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-child {
@@ -36,12 +41,12 @@
   position: absolute;
   background-color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  width: 20%;
-  height: 60%;
+  width: 450px;
+  height: 620px;
   padding: 20px;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50px;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   background-image: image-url('soundcloudorange.png');
   background-size: 30% 30%; 
@@ -54,11 +59,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-    height: 30px;
-    width: 250px;
+    height: 40px;
+    width: 400px;
     font-size: 100%;
     margin: 10px;
     text-align: center;
+    border: 1px solid black;
+    top: 400px;
 }
 
 .modal-child .modalsubmit {
@@ -66,8 +73,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-    height: 35px;
-    width: 250px;
+    height: 40px;
+    width: 400px;
     font-size: 100%;
     margin: 10px;
     text-align: center;
@@ -76,6 +83,11 @@
     padding: 0px;
     border-radius: 5px;
 }
+
+.modal-child .modalsubmit:hover {
+  cursor: pointer;
+}
+
 
 .modal-child .modalinput {
   border-radius: 5px;
@@ -89,26 +101,39 @@
   justify-content: center;
   align-items: center;
   
+  
 }
 
  
 
 .modalerrors {
+  height: 20px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: red;
 }
 
+.modal-child .w {
+  height: 20px;
+  font-size: 20px;
+}
 
 
  .close-x {
+   width: 30px;
+   height: 30px;
    position: absolute;
    top: 5px;
    right: 5px;
    cursor: pointer;
-   color: black;
+   color: gray;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-image: image-url('cross.png');
+   background-size: cover;
+
  }
 
 
