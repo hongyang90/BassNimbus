@@ -8,7 +8,7 @@ import { Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 import {ProtectedRoute, AuthRoute, DefaultRoute} from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import Discover from './discover/discover';
-import UserShow from './user/user_show';
+import UserShowContainer from './user/user_show_container';
 
 
 
@@ -17,7 +17,7 @@ const App = () => (
         <Modal/>
         <Switch >
             <ProtectedRoute exact path='/discover' component={Discover}/>
-            <ProtectedRoute exact path='/users/:userId' component={UserShow}/>
+            <ProtectedRoute exact path='/users/:userId' component={UserShowContainer}/>
             <AuthRoute exact path='/' component={SplashContainer}/>
             <DefaultRoute path='/' component={SplashContainer}/>
 

@@ -12,15 +12,14 @@ class UserShow extends React.Component {
     }
 
     render() {
+        const user = this.props.currentUser;
         return (
             <Layout >
                 <div className='show'>
                     <div className='show-banner'>
                         <div className='profile-pic'>
-                            <div className='user-img'></div>
-                            <div>
-                                {/* <p>Update photo</p> */}
-                            </div>
+                            <img className='user-img' src={user.photoUrl} alt=""/>
+                          
                         </div>
                         <div className='display-name'>
                             <h2>Username Goes Here</h2>

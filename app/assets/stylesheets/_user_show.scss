@@ -18,8 +18,7 @@
     margin: 25px;
     display: flex;
     justify-content: center;
-    border-radius: 50%;
-    background: black;
+    
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -29,7 +28,8 @@
 .user-img {
      height: 200px;
     width: 200px;
- background-image: black;
+    border-radius: 50%;
+//  background-image: black;
 }
 
 .display-name {
