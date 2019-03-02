@@ -5,7 +5,7 @@ import Modal from './modal/modal_container';
 // import SplashNav from './splashnav/splash_nav_container';
 import SplashContainer from './splash/splash_container';
 import { Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
-import {ProtectedRoute, AuthRoute} from '../util/route_util';
+import {ProtectedRoute, AuthRoute, DefaultRoute} from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import Discover from './discover/discover';
 import UserShow from './user/user_show';
@@ -15,10 +15,15 @@ import UserShow from './user/user_show';
 const App = () => (
     <>
         <Modal/>
-        <AuthRoute exact path='/' component={SplashContainer}/>
+        <Switch >
+            <ProtectedRoute exact path='/discover' component={Discover}/>
+            <ProtectedRoute exact path='/users/:userId' component={UserShow}/>
+            <AuthRoute exact path='/' component={SplashContainer}/>
+            <DefaultRoute path='/' component={SplashContainer}/>
+
+        </Switch>
+        
         {/* <ProtectedRoute exact path='/discover' component={HeaderContainer} /> */}
-        <ProtectedRoute  path='/discover' component={Discover}/>
-        <ProtectedRoute path='/users/:userId' component={UserShow}/>
     </>
 )
 
