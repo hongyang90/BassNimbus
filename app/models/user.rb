@@ -7,6 +7,11 @@ class User < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :songs,
+    primary_key: :id,
+    foreign_key: :artist_id,
+    class_name: :Song
+
     after_initialize :ensure_session_token
 
     def password=(password)

@@ -9,8 +9,8 @@
 
 ActiveRecord::Base.transaction do
  User.destroy_all
- user1 = User.create!(username: "demouser", password: "password")
- 
+ user1 = User.create!(username: "hunter12", password: "password")
+ user1.photo.attach(io: File.open('app/assets/images/profilepics/pfpic.jpg'), filename: 'pfpic.jpg')
  
  
 end
