@@ -1,7 +1,7 @@
 import * as SongAPI from '../util/song_api_util';
 
 export const RECEIVE_ALL_SONGS = 'RECEIVE_ALL_SONGS';
-export const RECEIEVE_SONG = 'RECEIEVE_SONG';
+export const RECEIVE_SONG = 'RECEIVE_SONG';
 export const REMOVE_SONG = 'REMOVE_SONG';
 export const RECEIVE_SONG_ERRORS = 'RECEIVE_SONG_ERRORS';
 
@@ -11,7 +11,7 @@ const receiveAllSongs = songs => ({
 });
 
 const receiveSong = song => ({
-    type: RECEIEVE_SONG,
+    type: RECEIVE_SONG,
     song
 });
 

@@ -8,8 +8,9 @@ import Root from './components/root';
 import * as session_actions from './actions/session_actions';
 import * as util from './util/session_api_util';
 import * as songActions from './actions/song_actions';
-// import * as songapi from './util/song_api_util';
+import * as songapi from './util/song_api_util';
 
+window.logout = util.destroySession;
 window.createSong = songActions.createSong;
 window.getsongs = songActions.fetchSongs;
 window.getsong = songActions.fetchSong;

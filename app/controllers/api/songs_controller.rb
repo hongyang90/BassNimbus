@@ -33,11 +33,11 @@ class Api::SongsController < ApplicationController
     def destroy
       @song = Song.find(params[:id])
       @song.destroy
-
+      render 'api/songs/show'
     end
 
     private 
     def song_params
-        params.require(:song).permit(:title, :artist_id)
+        params.require(:song).permit(:title)
     end
 end
