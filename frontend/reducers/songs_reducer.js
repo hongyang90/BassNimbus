@@ -15,3 +15,5 @@ const SongsReducer = (oldState = {}, action) => {
             return oldState;
     }
 };
+
+export default SongsReducer;

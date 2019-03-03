@@ -3,6 +3,7 @@ import * as SongAPI from '../util/song_api_util';
 export const RECEIVE_ALL_SONGS = 'RECEIVE_ALL_SONGS';
 export const RECEIEVE_SONG = 'RECEIEVE_SONG';
 export const REMOVE_SONG = 'REMOVE_SONG';
+export const RECEIVE_SONG_ERRORS = 'RECEIVE_SONG_ERRORS';
 
 const receiveAllSongs = songs => ({
     type: RECEIVE_ALL_SONGS,
@@ -19,13 +20,18 @@ const removeSong = songId => ({
     songId
 });
 
+const receiveErrors = errors => ({
+    type: RECEIVE_SONG_ERRORS,
+    errors
+});
+
 export const fetchSongs = () => dispatch => (
     SongAPI.fetchSongs()
     .then(songs => dispatch(receiveAllSongs(songs)))
 );
 
-export const fetchPost = id => dispatch => (
-    PostApiUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
+export const fetchSong = id => dispatch => (
+    SongAPI.fetchSong(id).then(song => dispatch(receiveSong(song)))
 );
 
 export const createSong = song => dispatch => (
