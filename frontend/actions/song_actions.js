@@ -20,7 +20,7 @@ const removeSong = songId => ({
     songId
 });
 
-const receiveErrors = errors => ({
+const receiveSongErrors = errors => ({
     type: RECEIVE_SONG_ERRORS,
     errors
 });

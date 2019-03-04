@@ -3,7 +3,14 @@ import SplashNav from './splash_nav_container';
 
 class Splash extends React.Component {
 
+
+    // componentDidMount() {
+    //     this.props.fetchSongs();
+    // }
+
     render() {
+        let songs = this.props.songs;
+
         return (
             <div className='splash'>
                 < SplashNav />
@@ -15,7 +22,9 @@ class Splash extends React.Component {
                         <button onClick={() => this.props.openModal('signup')}>Start uploading today</button>
                     </div>
                     <div className='splash-mid' >
+                        <div>
 
+                        </div>
                     </div>
                 </div>
             </div>

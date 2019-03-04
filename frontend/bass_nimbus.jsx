@@ -10,7 +10,7 @@ import * as util from './util/session_api_util';
 import * as songActions from './actions/song_actions';
 import * as songapi from './util/song_api_util';
 
-window.logout = util.destroySession;
+
 window.createSong = songActions.createSong;
 window.getsongs = songActions.fetchSongs;
 window.getsong = songActions.fetchSong;
