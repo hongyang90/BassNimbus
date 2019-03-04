@@ -9,31 +9,78 @@
     height: 2700px;
     background-color: white;
 
-
-    .genre {
+    .leftside {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-        width: 100%;
-    }
-    
-    .genre-title {
-        display: flex;
-        align-items: flex-end;
         justify-content: flex-start;
-        height: 50px;
-        width: 95%;
-        margin-bottom: 10px;
-        font-size: 22px;
+        border-right: 1px solid lightgray;
+        width: 910px;
+    
+        .genre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 875px;
+            margin-top: 30px;
+            padding-left: 10px;
+        }
+        
+        .genre-title {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 50px;
+            width: 95%;
+            margin-bottom: 10px;
+            font-size: 22px;
+            padding-bottom: 5px;
+
+            .description {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: gray;
+                height: 20px;
+                margin-top: 5px;
+            }
+        }
+
+        .genre-songs {
+            border-bottom: 0.3mm solid lightgray;
+            height: 75%;
+            width: 95%;
+            margin-bottom: 15px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+}
+
+
+.splashsongindex {
+    height: 185px;
+    width: 185px;
+    
+
+    img {
+        height: 180px;
+        width: 180px
     }
 
-    .genre-songs {
-        border-bottom: 0.3mm solid lightgray;
-        height: 85%;
-        width: 95%;
-        margin-bottom: 15px;
-        background-color: gray;
+    .songname {
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: normal;
+        margin-top: 5px;
+        height: 15px
     }
+    
 }

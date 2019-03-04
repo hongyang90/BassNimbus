@@ -9,6 +9,7 @@ import {ProtectedRoute, AuthRoute, DefaultRoute} from '../util/route_util';
 import HeaderContainer from './header/header_container';
 import Discover from './discover/discover';
 import UserShowContainer from './user/user_show_container';
+import DiscoverContainer from './discover/discover_container';
 
 
 
@@ -16,7 +17,7 @@ const App = () => (
     <>
         <Modal/>
         <Switch >
-            <ProtectedRoute exact path='/discover' component={Discover}/>
+            <ProtectedRoute exact path='/discover' component={DiscoverContainer}/>
             <ProtectedRoute exact path='/users/:userId' component={UserShowContainer}/>
             <AuthRoute exact path='/' component={SplashContainer}/>
             <DefaultRoute path='/' component={SplashContainer}/>
