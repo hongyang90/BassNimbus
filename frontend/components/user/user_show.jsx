@@ -19,7 +19,7 @@ class UserShow extends React.Component {
                     <div className='show-banner'>
                         <div className='profile-pic'>
                         {/* this needs to be the actual user pic not current user */}
-                            {/* <img className='user-img' src={user.photoUrl} alt=""/>  */}
+                            <img className='user-img' src={''} alt=""/> 
                           
                         </div>
                         <div className='display-name'>

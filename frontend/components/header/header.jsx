@@ -30,7 +30,7 @@ class Header extends React.Component {
                 <Link to='/discover'><div className='header-home'>Home</div></Link>
                 <div className='fill'></div>
                 <div className='headerupload'>Upload</div>
-                <Link to={`/users/${user.id}`}><div ><img className='header-pic' src={user.photoUrl} alt="" /></div></Link>
+                <Link to={`/users/${user.id}`}><div className='header-pic'><img className='header-pic' src={user.photoUrl} alt="" /></div></Link>
                 <Link to={`/users/${user.id}`} ><div className='username'><p>{user.username}</p></div></Link>
                 <div className='dropdown' onClick={this.dropdown} >
                     <div className='drp-btn' ><p className="fas fa-ellipsis-h"></p></div>

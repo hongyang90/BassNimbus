@@ -9,8 +9,10 @@ import * as session_actions from './actions/session_actions';
 import * as util from './util/session_api_util';
 import * as songActions from './actions/song_actions';
 import * as songapi from './util/song_api_util';
+import {fetchUser} from './actions/user_actions';
 
 
+window.fetchUser = fetchUser;
 window.createSong = songActions.createSong;
 // window.getsongs = songActions.fetchSongs;
 window.getsongs = songapi.fetchSongs;
