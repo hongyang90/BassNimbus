@@ -6,8 +6,8 @@ class UserShow extends React.Component {
 
     constructor(props) {
         super(props)
-        // debugger
     }
+
     componentDidMount() {
     }
 
@@ -18,7 +18,8 @@ class UserShow extends React.Component {
                 <div className='show'>
                     <div className='show-banner'>
                         <div className='profile-pic'>
-                            <img className='user-img' src={user.photoUrl} alt=""/>
+                        {/* this needs to be the actual user pic not current user */}
+                            {/* <img className='user-img' src={user.photoUrl} alt=""/>  */}
                           
                         </div>
                         <div className='display-name'>

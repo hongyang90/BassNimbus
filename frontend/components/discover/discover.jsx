@@ -21,14 +21,20 @@ class Discover extends React.Component {
         });
         let songs1;
         let songs2;
+        let songs3;
+        let songs4;
         if (songs === undefined) {
             songs1 = "";
             songs2 = '';
+            songs3 = '';
+            songs4 = '';
         }
 
         else {
             songs1 = songs.slice(0,4);
             songs2 = songs.slice(4,8);
+            songs3 = songs.slice(8,12);
+            songs4 = songs.slice(12,16);
         }
         console.log(songs1)
 
@@ -50,11 +56,31 @@ class Discover extends React.Component {
 
                             <div className='genre'>
                                 <div className='genre-title'>
-                                    <span>What's New</span>
+                                    <span>Fresh Pressed</span>
                                     <span className='description'>New releases this week</span>
                                 </div>
                                 <div className='genre-songs'>
                                     {songs2}
+                                </div>
+                            </div>
+
+                            <div className='genre'>
+                                <div className='genre-title'>
+                                    <span>Hot and Trending</span>
+                                    <span className='description'>What's popular among the BassNimbus community</span>
+                                </div>
+                                <div className='genre-songs'>
+                                    {songs3}
+                                </div>
+                            </div>
+
+                            <div className='genre'>
+                                <div className='genre-title'>
+                                    <span>Biggest Hits</span>
+                                    <span className='description'>Classic songs that have withstood time</span>
+                                </div>
+                                <div className='genre-songs'>
+                                    {songs4}
                                 </div>
                             </div>
 
