@@ -21,10 +21,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 350px;
+            height: 300px;
             width: 875px;
             margin-top: 30px;
             padding-left: 10px;
+            border-bottom: 0.3mm solid lightgray;
+            margin-left: 10px;
         }
         
         .genre-title {
@@ -49,11 +51,10 @@
         }
 
         .genre-songs {
-            border-bottom: 0.3mm solid lightgray;
-            height: 75%;
+            height: 90%;
             width: 95%;
             margin-bottom: 15px;
-            background-color: lightgray;
+            background-color: none;
             display: flex;
             align-items: center;
             justify-content: space-between;
