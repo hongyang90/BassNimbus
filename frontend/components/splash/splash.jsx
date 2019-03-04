@@ -1,16 +1,28 @@
 import React from 'react';
 import SplashNav from './splash_nav_container';
+import SongIndexItem from '../song_index_item/song_index_item';
 
 class Splash extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-
-    // componentDidMount() {
-    //     this.props.fetchSongs();
-    // }
+    componentDidMount() {
+        this.props.fetchSongs();
+    }
 
     render() {
-        let songs = this.props.songs;
+        let songs = this.props.songs.map(el => {
+            return (
+                <>
+                
+                    <img key={el.id} src={el.photoUrl} />
+                    {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
+                </>
+            )
+        });
 
+    
         return (
             <div className='splash'>
                 < SplashNav />
@@ -22,8 +34,8 @@ class Splash extends React.Component {
                         <button onClick={() => this.props.openModal('signup')}>Start uploading today</button>
                     </div>
                     <div className='splash-mid' >
-                        <div>
-
+                        <div className='splash-songs'>
+                            {songs}
                         </div>
                     </div>
                 </div>

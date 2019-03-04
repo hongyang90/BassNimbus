@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 import Splash from './splash';
-import { fetchSongs } from '../../util/song_api_util';
+import { fetchSongs } from '../../actions/song_actions';
 
 const mapStateToProps = state => ({
     songs: Object.values(state.entities.songs)

@@ -12,14 +12,13 @@ import * as songapi from './util/song_api_util';
 
 
 window.createSong = songActions.createSong;
-window.getsongs = songActions.fetchSongs;
+// window.getsongs = songActions.fetchSongs;
+window.getsongs = songapi.fetchSongs;
 window.getsong = songActions.fetchSong;
 
 // window.login = session_actions.login;
 // window.logout = session_actions.logout;
 // window.signup = session_actions.signup;
-// window.cs = util.createSession;
-// window.ds = util.destroySession;
 // testing
 
 document.addEventListener('DOMContentLoaded', () => {
