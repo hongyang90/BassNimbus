@@ -16,6 +16,8 @@ class UserShow extends React.Component {
     render() {
         // this user should be the fetched user not current user
         const user = this.props.user;
+        let songs = this.props.songs;
+
         if (user === undefined) {
             return (
                 <div></div>

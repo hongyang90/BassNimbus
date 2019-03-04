@@ -4,7 +4,8 @@ import {fetchUser} from '../../actions/user_actions';
 
 
 const msp = (state, ownProps) => ({
-    user: state.entities.users[ownProps.match.params.userId]
+    user: state.entities.users[ownProps.match.params.userId],
+    songs: Object.values(state.entities.songs)
 });
 
 const mdp = dispatch => ({
