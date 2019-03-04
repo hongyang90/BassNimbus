@@ -4,7 +4,8 @@ import Splash from './splash';
 import { fetchSongs } from '../../actions/song_actions';
 
 const mapStateToProps = state => ({
-    songs: Object.values(state.entities.songs)
+    songs: Object.values(state.entities.songs),
+    // users: state.entities.users
 });
 
 const mapDispatchToProps = dispatch => ({

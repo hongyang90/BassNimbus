@@ -20,7 +20,7 @@ class sessionForm extends React.Component{
         e.preventDefault();
 
         
-        setTimeout(() => this.props.login({ username: 'demouser', password: 'password' })
+        setTimeout(() => this.props.login({ username: 'DemoUser', password: 'password' })
             .then(() => this.props.closeModal()), 1800);
         setTimeout(()=> this.demoLogin2(), 1000);
         this.demoLogin1();
@@ -33,7 +33,7 @@ class sessionForm extends React.Component{
         let input = document.querySelectorAll(".modalinput")[0];
         input.select();
         input.value = '';
-        let text = 'demouser';
+        let text = 'DemoUser';
         let l = text.length;
         let current = 0;
         let time = 100;

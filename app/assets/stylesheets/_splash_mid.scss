@@ -1,0 +1,104 @@
+.splash-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .info {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+             margin: auto;
+            color: #666;
+            background-color: #F1F2F1;
+            padding: 15px;
+            font-size: 16px;
+            width: 600px;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+        }
+
+        h2 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        button {
+             font-family: 'Open Sans', sans-serif;
+            color: white;
+            font-size: 16px;
+            font-weight: 50;
+            height: 45px;
+            width: 170px;
+            background-color: #f50;
+            border-radius: 3px;
+            margin: 5px 10px 0px 0px;
+            cursor: pointer;
+            border: none;
+        }
+
+
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        height: 37px;
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+
+.splash-songs {
+    height: 500px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.splashsongindex {
+    height: 185px;
+    width: 185px;
+    
+
+    img {
+        height: 180px;
+        width: 180px
+    }
+
+    .songname {
+        font-size: 13px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: normal;
+        margin-top: 5px;
+        height: 15px
+    }
+    
+}
+
+     button {
+             font-family: 'Open Sans', sans-serif;
+            color: white;
+            font-size: 16px;
+            font-weight: 50;
+            height: 45px;
+            width: 250px;
+            background-color: #f50;
+            border-radius: 3px;
+            margin: 5px 10px 0px 0px;
+            cursor: pointer;
+            border: none;
+        }
+}
