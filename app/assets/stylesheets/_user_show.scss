@@ -47,6 +47,7 @@
 .display-name h2 {
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 30px;
 }
 
 
@@ -57,7 +58,7 @@
 .show-content {
     display: flex;
     width: 1240px;
-    height: 2000px;
+    height: 1200px;
     background-color: white;
     flex-direction: column;
 }

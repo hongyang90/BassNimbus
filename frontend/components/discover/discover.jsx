@@ -38,7 +38,6 @@ class Discover extends React.Component {
             songs3 = songs.slice(8,12);
             songs4 = songs.slice(12,16);
         }
-        console.log(songs1)
 
         return (
             <Layout >

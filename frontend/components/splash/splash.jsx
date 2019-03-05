@@ -12,7 +12,7 @@ class Splash extends React.Component {
     }
 
     render() {
-        let songs = this.props.songs.map(el => {
+        let songs = this.props.songs.slice(0,12).map(el => {
             return (
                 <>
                     <SongIndexItem key={el.id} song={el} users={this.props.users} />
