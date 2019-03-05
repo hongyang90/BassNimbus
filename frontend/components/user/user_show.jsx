@@ -36,11 +36,11 @@ class UserShow extends React.Component {
         // this user should be the fetched user not current user
         const user = this.props.user;
         
-        // if (this.props.errors !== undefined) {
-        //     return (
-        //         this.renderErrors()
-        //     )
-        // }
+        if (this.props.errors.length !== 0) {
+            return (
+               <div>404 Page not found</div>
+            )
+        }
 
 
         if (user === undefined) {

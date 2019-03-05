@@ -11,8 +11,13 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
-        render 'api/users/show'
+        @user = User.find_by(id: params[:id])
+        if @user
+          
+            render 'api/users/show'
+        else
+         render json: ["Page Does Not Exist"], status: 404
+        end
         
     end
 
