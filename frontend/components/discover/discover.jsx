@@ -8,14 +8,15 @@ class Discover extends React.Component {
 
     componentDidMount() {
         this.props.fetchSongs();
+        this.props.fetchUsers();
     }
 
     render() {
-
-        let songs = this.props.songs.map(el => {
+        
+        let songs = this.props.songs.map(song => {
             return (
                 <>
-                    <SongIndexItem key={el.id} song={el} users={this.props.users} />
+                    <SongIndexItem key={song.id} song={song} users={this.props.users} />
                     {/* <div className='songname'>{el.title}</div> */}
 
                 </>
