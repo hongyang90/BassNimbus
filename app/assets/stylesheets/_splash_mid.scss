@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
 
+    .songindexlink:hover {
+            cursor: auto;
+    }
+
     .info {
         height: 50px;
         display: flex;

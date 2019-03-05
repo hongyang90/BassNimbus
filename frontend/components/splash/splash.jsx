@@ -9,9 +9,11 @@ class Splash extends React.Component {
 
     componentDidMount() {
         this.props.fetchSongs();
+        this.props.fetchUsers();
     }
 
     render() {
+        let users = this.props.users;
         let songs = this.props.songs.slice(0,12).map(el => {
             return (
                 <>
