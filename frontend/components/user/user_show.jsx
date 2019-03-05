@@ -10,7 +10,6 @@ class UserShow extends React.Component {
 
     componentDidMount() {
         let id = this.props.match.params.userId;
-        console.log(id);
         this.props.fetchUser(id);
     }
 
@@ -25,8 +24,6 @@ class UserShow extends React.Component {
         const user = this.props.user;
         
 
-        // console.log(songs);
-        console.log(this.props.match.params.userId);
 
 
         if (user === undefined) {
@@ -60,7 +57,7 @@ class UserShow extends React.Component {
                         <div className='show-banner'>
                             <div className='profile-pic'>
                             {/* this needs to be the actual user pic not current user */}
-                                <img className='user-img' src={''} alt=""/> 
+                                <img className='user-img' src={user.photoUrl} alt=""/> 
                               
                             </div>
                             <div className='display-name'>

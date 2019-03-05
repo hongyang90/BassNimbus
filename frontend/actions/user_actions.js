@@ -7,8 +7,13 @@ const receiveUser = payload => ({
     payload
 });
 
+const receiveErrors = errors => ({
+    type: RECEIVE_ERRORS,
+    errors
+});
+
 export const fetchUser = id => dispatch => (
     UserAPI.fetchUser(id)
-        .then(user => dispatch(receiveUser(user)))
+        .then(user => dispatch(receiveUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)) )
 );
 
