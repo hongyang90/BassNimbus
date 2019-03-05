@@ -10,6 +10,7 @@ import HeaderContainer from './header/header_container';
 import Discover from './discover/discover';
 import UserShowContainer from './user/user_show_container';
 import DiscoverContainer from './discover/discover_container';
+import Music from '../components/music/music';
 
 
 
@@ -23,6 +24,7 @@ const App = () => (
             <DefaultRoute path='/' component={SplashContainer}/>
 
         </Switch>
+        < Music />
         
         {/* <ProtectedRoute exact path='/discover' component={HeaderContainer} /> */}
     </>
