@@ -16,6 +16,8 @@ class Discover extends React.Component {
             return (
                 <>
                     <SongIndexItem key={el.id} song={el} users={this.props.users} />
+                    {/* <div className='songname'>{el.title}</div> */}
+
                 </>
             )
         });

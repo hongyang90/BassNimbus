@@ -16,7 +16,7 @@ class SongIndexItem extends React.Component {
                 <div className='image'><img src={song.photoUrl}/></div>
                 <div className='songname'>{song.title}</div>
                 {/* <div className='artistname'>{username}</div> */}
-                {/* <audio ref="audio_tag" src={song.soundUrl} controls autoPlay /> */}
+                {/* <audio ref="audio_tag" src={song.soundUrl} controls/> */}
 
             </div>
         );
