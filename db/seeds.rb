@@ -12,7 +12,7 @@ User.destroy_all
 
 # user0 = User.create(username: "hunter12", password: "password")
 user1 = User.create(username: "Hong", password: "password")
-user1.photo.attach(io: File.open('/Users/KanyeMain/Desktop/BassNimbusArt/pfpic.jpg'), filename: 'pfpic.jpg')
+user1.photo.attach(io: File.open('/Users/KanyeMain/Desktop/BassNimbusArt/user1.jpg'), filename: 'user1.jpg')
 
 user2 = User.create(username: "DemoUser", password: "password")
 user2.photo.attach(io: File.open('/Users/KanyeMain/Desktop/BassNimbusArt/demo.jpg'), filename: 'demo.jpg')
