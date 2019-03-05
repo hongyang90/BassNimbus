@@ -2,6 +2,7 @@ import React from 'react';
 import LoginFormContainer from '../../components/session_form/login_form_container';
 import SignupFormContainer from '../../components/session_form/signup_form_container';
 import EditSongContainer from '../../components/songforms/edit_song_container';
+import DeleteSongContainer from '../../components/songforms/delete_song_container';
 
 const Modal = ({modal, song, closeModal}) => {
     if (!modal) {
@@ -17,6 +18,9 @@ const Modal = ({modal, song, closeModal}) => {
             break;
         case 'editsong':
             component = <EditSongContainer song={song}/>;
+            break;
+        case 'deletesong': 
+            component = <DeleteSongContainer song={song}/>;
             break;
         default:
             return null;

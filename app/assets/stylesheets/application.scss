@@ -137,9 +137,18 @@
  }
 
   .editsongform {
-    height: 100px;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 80%;
     background: gray;
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
   }
  
 

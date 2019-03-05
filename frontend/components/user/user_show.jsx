@@ -64,10 +64,9 @@ class UserShow extends React.Component {
                         <div className='actions'>
                             <div onClick={() => this.props.openModal('editsong', el)}><i className="fas fa-edit"></i></div>
                             <br/>
-                            <div><i className="fas fa-trash-alt"></i></div>
+                            <div onClick={() => this.props.openModal('deletesong', el)} ><i className="fas fa-trash-alt"></i></div>
                         </div>
                         {/* <img key={el.id} src={el.photoUrl} /> */}
-                        {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
                     </div>
                 )
             });
@@ -78,7 +77,6 @@ class UserShow extends React.Component {
                     <div className='show'>
                         <div className='show-banner'>
                             <div className='profile-pic'>
-                            {/* this needs to be the actual user pic not current user */}
                                 <img className='user-img' src={user.photoUrl} alt=""/> 
                               
                             </div>
