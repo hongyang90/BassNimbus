@@ -3,11 +3,12 @@ import UserShow from './user_show';
 import {fetchUser} from '../../actions/user_actions';
 
 
-const msp = (state, ownProps) => ({
+const msp = (state, ownProps) => {
+    return {
     user: state.entities.users[ownProps.match.params.userId],
-    songs: Object.values(state.entities.songs)
+    songs: Object.values(state.entities.songs).filter(song => song.artistId == ownProps.match.params.userId)
     // add filter here wildcard .filter(song => song.artistId === ownProps.match.params.userId)
-});
+};};
 
 const mdp = dispatch => ({
     fetchUser: id => dispatch(fetchUser(id))

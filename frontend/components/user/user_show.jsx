@@ -10,6 +10,7 @@ class UserShow extends React.Component {
 
     componentDidMount() {
         let id = this.props.match.params.userId;
+        console.log(id);
         this.props.fetchUser(id);
     }
 
@@ -22,31 +23,37 @@ class UserShow extends React.Component {
     render() {
         // this user should be the fetched user not current user
         const user = this.props.user;
-        let songs = this.props.songs.map(el => {
-            return (
-                <div className='song-itemdiv' >
-                    <SongIndexItem key={el.id} song={el} users={this.props.users} />
-                    <div className='songitemdivright'>
-                        <div className='name'>
-                            <div className='title'>{el.title}</div>
-                            <div className='username'>{user.username}</div>
+        
 
-                        </div>
-                        <div className='waveform'></div>
-                    </div>
-                    {/* <img key={el.id} src={el.photoUrl} /> */}
-                    {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
-                </div>
-            )
-        });
+        // console.log(songs);
+        console.log(this.props.match.params.userId);
 
-        console.log(songs);
 
         if (user === undefined) {
             return (
                 <div></div>
             )
         } else {
+
+            let songs = this.props.songs.map(el => {
+                return (
+                    <div className='song-itemdiv' >
+                        <SongIndexItem key={el.id} song={el} users={this.props.users} />
+                        <div className='songitemdivright'>
+                            <div className='name'>
+                                <div className='title'>{el.title}</div>
+                                <div className='username'>{user.username}</div>
+
+                            </div>
+                            <div className='waveform'></div>
+                        </div>
+                        {/* <img key={el.id} src={el.photoUrl} /> */}
+                        {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
+                    </div>
+                )
+            });
+
+
             return (
                 <Layout >
                     <div className='show'>
