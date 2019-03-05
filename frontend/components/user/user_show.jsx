@@ -19,11 +19,28 @@ class UserShow extends React.Component {
         }
     }
 
+
+    renderErrors() {
+        return (
+            <>
+                {this.props.errors.map((error, i) => (
+                    <div key={`error-${i}`} >
+                        {error}
+                    </div>
+                ))}
+            </>
+        );
+    }
+
     render() {
         // this user should be the fetched user not current user
         const user = this.props.user;
         
-
+        // if (this.props.errors !== undefined) {
+        //     return (
+        //         this.renderErrors()
+        //     )
+        // }
 
 
         if (user === undefined) {

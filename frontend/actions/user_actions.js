@@ -2,14 +2,15 @@ import * as UserAPI from '../util/user_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
+export const RECEIVE_USER_ERRORS = 'RECEIVE_USER_ERRORS';
 
 const receiveUser = payload => ({
     type: RECEIVE_USER,
     payload
 });
 
-const receiveErrors = errors => ({
-    type: RECEIVE_ERRORS,
+const receiveUserErrors = errors => ({
+    type: RECEIVE_USER_ERRORS,
     errors
 });
 
@@ -20,7 +21,7 @@ const receiveAllUsers = (users) => ({
 
 export const fetchUser = id => dispatch => (
     UserAPI.fetchUser(id)
-        .then(user => dispatch(receiveUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)) )
+        .then(user => dispatch(receiveUser(user)), errors => dispatch(receiveUserErrors(errors.responseJSON)) )
 );
 
 export const fetchUsers = () => dispatch => (
