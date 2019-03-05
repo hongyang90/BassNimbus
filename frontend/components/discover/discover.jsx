@@ -86,7 +86,7 @@ class Discover extends React.Component {
                                     <div className='genre'>
                                         <div className='genre-title'>
                                             <span>Biggest Hits</span>
-                                            <span className='description'>Classic songs that have withstood time</span>
+                                            <span className='description'>Time tested classics</span>
                                         </div>
                                         <div className='genre-songs'>
                                             {songs4}

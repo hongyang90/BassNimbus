@@ -4,10 +4,7 @@ import React from 'react';
 class Music extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            play: false,
-            pause: true,
-        };
+        this.state = {play: false, pause: true , currentTime: null};
         this.url = "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--36e9f169e68f4f9153889063f154b47715455a8b/1.m4a";
         this.audio = new Audio(this.url);
         this.play = this.play.bind(this);

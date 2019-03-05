@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import UserShow from './user_show';
 import {fetchUser} from '../../actions/user_actions';
+import {deleteSong, updateSong} from '../../actions/song_actions';
 
 
 const msp = (state, ownProps) => {
@@ -11,7 +12,9 @@ const msp = (state, ownProps) => {
 };};
 
 const mdp = dispatch => ({
-    fetchUser: id => dispatch(fetchUser(id))
+    fetchUser: id => dispatch(fetchUser(id)),
+    deleteSong: id => dispatch(deleteSong(id)),
+    updateSong: song => dispatch(updateSong(song))
 });
 
 export default connect(msp, mdp)(UserShow);

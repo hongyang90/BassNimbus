@@ -61,6 +61,11 @@ class UserShow extends React.Component {
                             </div>
                             <div className='waveform'></div>
                         </div>
+                        <div className='actions'>
+                            <div><i class="fas fa-edit"></i></div>
+                            <br/>
+                            <div><i class="fas fa-trash-alt"></i></div>
+                        </div>
                         {/* <img key={el.id} src={el.photoUrl} /> */}
                         {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
                     </div>
