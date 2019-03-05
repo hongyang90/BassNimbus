@@ -88,7 +88,7 @@ class sessionForm extends React.Component{
 
     render () {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className='sessionForm' onSubmit={this.handleSubmit}>
                 <div onClick={this.props.closeModal} className="close-x"></div>
                 <p className='w'>Welcome to BassNimbus!</p> 
                 <p className='modalerrors'>{this.renderErrors()}</p>

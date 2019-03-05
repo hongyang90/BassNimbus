@@ -1,8 +1,9 @@
 import React from 'react';
 import LoginFormContainer from '../../components/session_form/login_form_container';
 import SignupFormContainer from '../../components/session_form/signup_form_container';
+import EditSongContainer from '../../components/songforms/edit_song_container';
 
-const Modal = ({modal, closeModal}) => {
+const Modal = ({modal, song, closeModal}) => {
     if (!modal) {
         return null;
     }
@@ -13,6 +14,9 @@ const Modal = ({modal, closeModal}) => {
             break;
         case 'signup':
             component = <SignupFormContainer />;
+            break;
+        case 'editsong':
+            component = <EditSongContainer song={song}/>;
             break;
         default:
             return null;

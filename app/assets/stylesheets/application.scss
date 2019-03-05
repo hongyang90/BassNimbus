@@ -95,7 +95,7 @@
 }
 
 
-.modal-child form {
+.modal-child .sessionform {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +136,11 @@
 
  }
 
-
+  .editsongform {
+    height: 100px;
+    width: 100px;
+    background: gray;
+  }
  
 
 @import '_splash.scss';
