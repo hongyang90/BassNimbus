@@ -19,7 +19,7 @@ json.songs do
             else
                 json.soundURL ''
             end
-            if 
+            if song.photo.attached?
                 json.photoUrl url_for(song.photo)  
             else
                 json.photoUrl ''

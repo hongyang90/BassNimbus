@@ -22,11 +22,11 @@ class Discover extends React.Component {
         } else {
                  songs = this.props.songs.map(song => {
                     return (
-                        <>
+                        <div key={song.id}>
                             <SongIndexItem key={song.id} song={song} users={this.props.users} />
                             {/* <div className='songname'>{el.title}</div> */}
         
-                        </>
+                        </div>
                     )
                 });
                 let songs1;

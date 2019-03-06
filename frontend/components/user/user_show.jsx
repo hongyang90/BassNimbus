@@ -55,7 +55,7 @@ class UserShow extends React.Component {
 
             let songs = this.props.songs.map(el => {
                 return (
-                    <div className='song-itemdiv' >
+                    <div className='song-itemdiv' key={el.id}>
                         <SongIndexItem key={el.id} song={el} users={this.props.users} />
                         <div className='songitemdivright'>
                             <div className='name'>
