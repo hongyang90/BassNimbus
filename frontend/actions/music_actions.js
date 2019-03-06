@@ -1,22 +1,22 @@
 export const PLAY = 'PLAY';
 export const PAUSE = 'PAUSE';
 
-const play = (song) => ({
+export const playSong = (songUrl) => ({
     type: PLAY,
-    song
+    songUrl
     // play: true
 });
 
-const pause = () => ({
+export const pauseSong = () => ({
     type: PAUSE,
     // play: false
 });
 
-export const playSong = dispatch => (
-    () => dispatch(play())
-);
+// export const playSong = dispatch => (
+//     (songUrl) => dispatch(play(songUrl))
+// );
 
-export const pauseSong = dispatch => (
-    () => dispatch(pause())
-);
+// export const pauseSong = dispatch => (
+//     () => dispatch(pause())
+// );
 

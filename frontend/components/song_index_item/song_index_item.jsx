@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ButtonContainer from '../music/button_container';
 
 
 class SongIndexItem extends React.Component {
@@ -33,6 +34,7 @@ class SongIndexItem extends React.Component {
             return (
                 <div className='splashsongindex'>
                     <div className='image'><img src={song.photoUrl}/></div>
+                    <ButtonContainer song={song} />
                     <div className='songname'>{song.title}</div>
                     {this.showLink()}
                     {/* <Link to={`/users/${song.artistId}`}><div className='artistname'>{users[song.artistId].username}</div></Link> */}
