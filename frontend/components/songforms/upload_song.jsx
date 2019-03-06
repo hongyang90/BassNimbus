@@ -53,7 +53,7 @@ class UploadSong extends React.Component {
                         </div>
                         <form onSubmit={this.handleSubmit} className='uploadsongform' >
                             <label>Song Title:
-                            {/* <input type="text" onChange={this.forceUpdate('title')} /> */}
+                            <input type="text" onChange={this.update('title')} />
                             </label>
 
                         </form>

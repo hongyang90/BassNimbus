@@ -4,7 +4,7 @@ import SongsReducer from './songs_reducer';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
-    songs: SongsReducer
+    songs: SongsReducer,
 });
 
 export default entitiesReducer;

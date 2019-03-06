@@ -18,7 +18,6 @@ class EditSongForm extends React.Component {
         e.preventDefault();
         this.props.updateSong({id: this.state.id, title: this.state.title})
             .then(() => this.props.closeModal())
-                // .then(() => this.props.history.push('/'));
     }
 
     render() {
