@@ -69,11 +69,41 @@
 .splashsongindex {
     height: 185px;
     width: 185px;
-    
+    position: relative;
 
     img {
         height: 180px;
         width: 180px
+    }
+
+    .songbuttonplay {
+        position: absolute;
+        display: none;
+        height: 75px;
+        width: 75px;
+        background-image: image-url('playbutton.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 58px;
+        left: 55px;
+        z-index: 1;
+       
+
+    }
+
+    .songbuttonpause {
+        position: absolute;
+        display: none;
+        height: 75px;
+        width: 75px;
+        background-image: image-url('pause.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 58px;
+        left: 55px;
+        z-index: 1;
+       
+
     }
 
     .songname {
@@ -93,3 +123,10 @@
     
 }
 
+.splashsongindex:hover .songbuttonplay {
+    display: block;
+}
+
+.splashsongindex:hover .songbuttonpause {
+    display: block;
+}
