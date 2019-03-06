@@ -105,21 +105,22 @@ class UploadSong extends React.Component {
                                     <div className='btndiv'>
                                         <label className='uploadbtn' htmlFor='songart' >Choose an Album Cover
                                         </label>
-                                        <input id='songart' type="file" onChange={this.handlePhoto} />
+                                        <input name ='songart' id='songart' type="file" onChange={this.handlePhoto} />
                                     </div>
                                     <div className='btndiv'>
                                         <label className='uploadbtn' htmlFor='songupload'> Choose song to upload
                                         </label>
-                                        <input  id='songupload' required type="file" onChange={this.handleSound} />
+                                        <input name='songupload' id='songupload' required type="file" onChange={this.handleSound} />
+                                    </div>
+                                    <div className='upload3'>
+                                        <input type="submit" value="Upload My Track" />
                                     </div>
                                 </form>
 
                                
 
                             </div>
-                            <div className='upload3'>
-                                <input type="submit" value="Upload My Track" />
-                            </div>
+                    
 
                         </div>
 
