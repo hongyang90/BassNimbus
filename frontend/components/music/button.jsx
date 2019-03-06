@@ -4,9 +4,9 @@ class Button extends React.Component {
     // need to pass in song info from the song index item 
     constructor(props) {
         super(props);
-        this.song = this.props.song;
-        this.state = {play: false};
-        this.playState = this.props.playState;
+        // this.song = this.props.song;
+        // this.state = {play: false};
+        // this.playState = this.props.playState;
         this.handleClickPause = this.handleClickPause.bind(this);
         this.handleClickPlay = this.handleClickPlay.bind(this);
     }
@@ -18,12 +18,12 @@ class Button extends React.Component {
     // }
 
     handleClickPlay() {
-        this.setState({play: true});
-        this.props.playSong(this.song.soundUrl);
+        // this.setState({play: true});
+        this.props.playSong(this.props.song.soundUrl);
     }
 
     handleClickPause() {
-        this.setState({ play: false });
+        // this.setState({ play: false });
 
         this.props.pauseSong();
     }
@@ -31,7 +31,7 @@ class Button extends React.Component {
 
     render() {
 
-        if (this.state.play === true) {
+        if (this.props.playState === true && this.props.songUrl === this.props.song.soundUrl) {
 
             return (
                 <div onClick={this.handleClickPause}>
