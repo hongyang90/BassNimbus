@@ -26,12 +26,12 @@ class EditSongForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit} className='editsongform'>
                 <div><img src={song.photoUrl}/></div>
-                <div className='title'>Song Title: {song.title}</div>
-                <div>
+                <div className='title'>{song.title}</div>
+                <div className='titleparent'>
                     <label >Edit Title:
-                        <input className='edittitle' type="text" onChange={this.update('title')} placeholder='Please Enter a Title'/>
                     </label>
-
+                    <br/>
+                    <input className='edittitle' type="text" onChange={this.update('title')} placeholder='Please Enter a Title'/>
                 </div>
                 <input className='submitform' type="submit" value='Edit Song'/>
             </form>
