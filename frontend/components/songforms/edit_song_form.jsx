@@ -16,7 +16,7 @@ class EditSongForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.updateSong(this.state)
+        this.props.updateSong({id: this.state.id, title: this.state.title})
             .then(() => this.props.closeModal())
                 // .then(() => this.props.history.push('/'));
     }
@@ -27,14 +27,14 @@ class EditSongForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit} className='editsongform'>
                 <div><img src={song.photoUrl}/></div>
-                <div>{song.title}</div>
+                <div className='title'>Song Title: {song.title}</div>
                 <div>
                     <label >Edit Title:
-                        <input type="text" onChange={this.update('title')} placeholder='Please Enter a Title'/>
+                        <input className='edittitle' type="text" onChange={this.update('title')} placeholder='Please Enter a Title'/>
                     </label>
 
                 </div>
-                <input type="submit" value='Edit Song'/>
+                <input className='submitform' type="submit" value='Edit Song'/>
             </form>
         )
     }
