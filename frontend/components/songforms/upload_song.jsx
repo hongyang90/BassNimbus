@@ -5,7 +5,7 @@ class UploadSong extends React.Component {
     constructor(props) {
         super(props);
         this.user = this.props.currentUser;
-        this.state = { title: '', photoUrl: null, photoFile: null, soundUrl: null, soundFile: null };
+        this.state = { title: '', photoUrl: null, photoFile: null, soundUrl: null, soundFile: null, loading: false };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePhoto = this.handlePhoto.bind(this);
         this.handleSound = this.handleSound.bind(this);
@@ -32,6 +32,7 @@ class UploadSong extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.props.createSong(this.state);
+        this.setState({loading: true});
 
         const formData = new FormData();
         formData.append('song[title]', this.state.title);
@@ -83,6 +84,22 @@ class UploadSong extends React.Component {
         // }
     }
 
+    showLoading() {
+        if (this.state.loading === true) {
+            return(
+                <div className='upload3'>
+                    <div><i className="fas fa-spinner fa-spin"></i> Uploading Files...</div>
+                </div>
+            )
+        } else {
+            return(
+                <div className='upload3'>
+                    <input type="submit" value="Upload My Track" />
+                </div>
+            )
+        }
+    }
+
     render() {
         let preview = this.state.photoUrl ? <img className='previewimg' src={this.state.photoUrl} alt="" /> : null;
         return (
@@ -105,16 +122,17 @@ class UploadSong extends React.Component {
                                     <div className='btndiv'>
                                         <label className='uploadbtn' htmlFor='songart' >Choose an Album Cover
                                         </label>
-                                        <input name ='songart' id='songart' type="file" onChange={this.handlePhoto} />
+                                        <input name ='songart' id='songart' type="file" accept='image/*' onChange={this.handlePhoto} />
                                     </div>
                                     <div className='btndiv'>
                                         <label className='uploadbtn' htmlFor='songupload'> Choose song to upload
                                         </label>
-                                        <input name='songupload' id='songupload' required type="file" onChange={this.handleSound} />
+                                        <input name='songupload' id='songupload' required type="file" accept='audio/*' onChange={this.handleSound} />
                                     </div>
-                                    <div className='upload3'>
+                                    {this.showLoading()}
+                                    {/* <div className='upload3'>
                                         <input type="submit" value="Upload My Track" />
-                                    </div>
+                                    </div> */}
                                 </form>
 
                                
