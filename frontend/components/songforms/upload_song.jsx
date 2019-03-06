@@ -4,8 +4,8 @@ import Layout from '../layout/layout';
 class UploadSong extends React.Component {
     constructor(props) {
         super(props);
-       this.user = this.props.currentUser;
-        this.state = { title: '', photoUrl: null, photoFile: null, soundUrl: null, soundFile: null }; 
+        this.user = this.props.currentUser;
+        this.state = { title: '', photoUrl: null, photoFile: null, soundUrl: null, soundFile: null };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePhoto = this.handlePhoto.bind(this);
         this.handleSound = this.handleSound.bind(this);
@@ -32,7 +32,7 @@ class UploadSong extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.props.createSong(this.state);
-        
+
         const formData = new FormData();
         formData.append('song[title]', this.state.title);
 
@@ -44,7 +44,7 @@ class UploadSong extends React.Component {
             formData.append('song[sound]', this.state.soundFile);
         }
         this.props.createSong(formData)
-        .then(res => this.props.history.push(`/users/${this.user}`));
+            .then(res => this.props.history.push(`/users/${this.user}`));
         // $.ajax({
         //     url: '/api/songs',
         //     method: 'POST',
@@ -63,7 +63,7 @@ class UploadSong extends React.Component {
 
         if (file) {
             reader.readAsDataURL(file);
-        } 
+        }
         // else {
         //     this.setState({ imageUrl: "", imageFile: null });
         // }
@@ -84,34 +84,44 @@ class UploadSong extends React.Component {
     }
 
     render() {
-        let preview = this.state.photoUrl ? <img src={this.state.photoUrl} alt=""/> : null;
+        let preview = this.state.photoUrl ? <img className='previewimg' src={this.state.photoUrl} alt="" /> : null;
         return (
             <Layout>
                 <div className='uploadmain'>
                     <div className='uploadsub'>
-                        <div>
-                            <h1>Upload New Track</h1>
-                        </div>
-                        <form onSubmit={this.handleSubmit} className='uploadsongform' >
-                            <label>Song Title:
-                            <input type="text" onChange={this.update('title')} />
-                            </label>
-                            <div className='preview'>
-                                {preview}
+                        <div className='uploadboxmain'>
+                            <div className='uploadtitle'>
+                                <h1>Upload New Track</h1>
                             </div>
-                            <div>
-                                <label>Upload Song Art
-                                    <input type="file" onChange={this.handlePhoto}/>
+                            <div className='uploadmid'>
+                                <div className='preview'>
+                                    {preview}
+                                </div>
+                                
+                                <form onSubmit={this.handleSubmit} className='uploadsongform' >
+                                    <h1>Song Title:
+                                    </h1>
+                                    <input className='songtitle' maxLength='25' type="text" onChange={this.update('title')} placeholder='song name'/>
+                                    <div className='btndiv'>
+                                        <label className='uploadbtn' htmlFor='songart' >Choose an Album Cover
+                                        </label>
+                                        <input id='songart' type="file" onChange={this.handlePhoto} />
+                                    </div>
+                                    <div className='btndiv'>
+                                        <label className='uploadbtn' htmlFor='songupload'> Choose song to upload
+                                        </label>
+                                        <input  id='songupload' required type="file" onChange={this.handleSound} />
+                                    </div>
+                                </form>
 
-                                </label>
+                               
+
                             </div>
-                            <div>
-                                <label> Upload a Song
-                                    <input required type="file" onChange={this.handleSound}/>
-                                </label>
+                            <div className='upload3'>
+                                <input type="submit" value="Upload My Track" />
                             </div>
-                            <input type="submit" value="Submit"/>
-                        </form>
+
+                        </div>
 
                     </div>
                 </div>

@@ -1,0 +1,106 @@
+.uploadmain {
+    display: flex;
+    justify-content: center;
+
+    .uploadsub {
+        display: flex;
+        width: 1240px;
+        height: 1200px;
+        background-color: white;
+        justify-content: center;
+        
+    }
+
+    .uploadboxmain {
+        height: 400px;
+        width: 800px;
+        border: 1px solid lightgray;
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        .uploadtitle {
+            height: 50px;
+            font-size: 30px;
+            width: fit-content
+        }
+
+        .upload3 input {
+            height: 40px;
+            width: 300px;
+            font-size: 100%;
+            margin: 10px;
+            text-align: center;
+            background-color: #f50;
+            color: white;
+            padding: 0px;
+            border-radius: 5px;
+        }
+        .upload3 input:hover {
+            cursor: pointer;
+        }
+
+        .uploadmid {
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            margin: 15px;
+
+
+            .preview {
+                height: 200px;
+                width: 200px;
+                border: 1px solid rgba(177, 172, 172, 1);
+
+                .previewimg {
+                    height: 200px;
+                    width: 200px;
+
+                }
+            }
+
+            .uploadsongform {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                #songupload, #songart {
+                    display: none
+                }
+                
+              
+                label {
+                    display: flex;
+                    border: 1px solid rgba(173, 169, 169, 1);
+                    border-radius: 3px;
+                    background-color: rgba(6, 114, 236, 1);
+                    color: white;
+                    height: 35px;
+                    width: 200px;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+                h1 {
+                    font-size: 24px;
+                }
+                .songtitle {
+                    height: 20px;
+                    border-radius: 3px;
+                    border-width: 1px;
+                    height: 20px;
+                    width: 200px;
+                    margin-bottom: 20px;
+                    font-size: small;
+                    text-align: center;
+                }
+            
+            }
+        }
+    }
+
+}
