@@ -16,11 +16,11 @@ class Splash extends React.Component {
         let users = this.props.users;
         let songs = this.props.songs.slice(0,12).map(el => {
             return (
-                <>
+                <div key={el.id}>
                     <SongIndexItem key={el.id} song={el} users={this.props.users} />
                     {/* <img key={el.id} src={el.photoUrl} /> */}
                     {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
-                </>
+                </div>
             )
         });
 

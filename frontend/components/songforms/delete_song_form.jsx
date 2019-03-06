@@ -20,7 +20,7 @@ class DeleteSongForm extends React.Component {
             <form onSubmit={this.handleSubmit} className='deletesongform'>
                 <div><img src={this.props.song.photoUrl} alt=""/></div>
                 <p>Are you sure you want to permanently delete this song?</p>
-                <input type="submit" value='Delete Song'/>
+                <input className='submitform' type="submit" value='Delete Song'/>
             </form>
         )
     }
