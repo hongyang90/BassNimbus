@@ -4,6 +4,7 @@ class DeleteSongForm extends React.Component {
     constructor(props) {
         super(props);
         this.songId = this.props.song.id;
+        this.handleSubmit = this.handleSubmit.bind(this);
     };
 
     handleSubmit(e) {
