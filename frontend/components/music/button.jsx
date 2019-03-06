@@ -34,15 +34,13 @@ class Button extends React.Component {
         if (this.props.playState === true && this.props.songUrl === this.props.song.soundUrl) {
 
             return (
-                <div onClick={this.handleClickPause}>
-                    Pause
+                <div className='songbuttonpause' onClick={this.handleClickPause}>
                  </div>
             )
         } else {
             return (
-                <div onClick={this.handleClickPlay}>
-                    Play
-            </div>
+                <div className='songbuttonplay' onClick={this.handleClickPlay}>
+                </div>
             )
         }
       
