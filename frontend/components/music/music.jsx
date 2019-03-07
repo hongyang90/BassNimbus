@@ -4,21 +4,28 @@ import React from 'react';
 class Music extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {volume: 1, played: 0, duration: null };
+        this.state = {volume: 1, played: 0.5, duration: null };
         this.audio = new Audio();
+        this.audio.preload = 'metadata';
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
 
         
     }
 
+    setDuration(e) {
+        this.setState({ duration: e.target.duration });
+    }
+
     componentDidUpdate(prevProps) {
+
         if (this.props.playState && prevProps.songUrl !== this.props.songUrl) {
+
             this.audio.src = this.props.songUrl;
-            // this.setState({duration: this.audio.duration});
+            this.audio.preload = 'metadata';
+            this.audio.addEventListener('loadeddata', this.setDuration.bind(this));
             this.play();
         } else if (prevProps.songUrl === this.props.songUrl && this.props.playState) {
-            // this.pause();
             this.play();
         } else {
             this.pause();
