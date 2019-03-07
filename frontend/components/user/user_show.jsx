@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../layout/layout';
 import SongIndexItem from '../song_index_item/song_index_item';
+import ButtonContainer from '../../components/music/button_container';
 
 class UserShow extends React.Component {
 
