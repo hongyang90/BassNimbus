@@ -40,6 +40,23 @@ class UserShow extends React.Component {
         );
     }
 
+
+    displayActions () {
+        if (this.props.currentUser === this.props.user.id) {
+            return (
+                <div className='actions'>
+                    <div onClick={() => this.props.openModal('editsong', el)}><i className="fas fa-edit"></i></div>
+                    <br />
+                    <div onClick={() => this.props.openModal('deletesong', el)} ><i className="fas fa-trash-alt"></i></div>
+                </div>
+            )
+        } else {
+            return (
+                <div></div>
+            )
+        }
+    }
+
     render() {
         // this user should be the fetched user not current user
         const user = this.props.user;
@@ -69,12 +86,12 @@ class UserShow extends React.Component {
                             </div>
                             <div className='waveform'></div>
                         </div>
-                        <div className='actions'>
+                        {this.displayActions()}
+                        {/* <div className='actions'>
                             <div onClick={() => this.props.openModal('editsong', el)}><i className="fas fa-edit"></i></div>
                             <br/>
                             <div onClick={() => this.props.openModal('deletesong', el)} ><i className="fas fa-trash-alt"></i></div>
-                        </div>
-                        {/* <img key={el.id} src={el.photoUrl} /> */}
+                        </div> */}
                     </div>
                 )
             });
