@@ -21,6 +21,7 @@
         align-items: center;
         flex-direction: column;
 
+       
 
         .uploadtitle {
             height: 50px;
@@ -106,9 +107,19 @@
                     font-size: small;
                     text-align: center;
                 }
+                .loading {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 75px;
+                    width: 320px;
+                }
+               
             
             }
         }
     }
+      
 
 }
+

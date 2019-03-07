@@ -12,6 +12,7 @@ import UserShowContainer from './user/user_show_container';
 import DiscoverContainer from './discover/discover_container';
 import MusicContainer from '../components/music/music_container';
 import UploadSongContainer from '../components/songforms/upload_song_container';
+import MusicPlayerContainer from '../components/music/music_player_container';
 
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
 
         </Switch>
         < MusicContainer />
+        {/* <MusicPlayerContainer /> */}
         
         {/* <ProtectedRoute exact path='/discover' component={HeaderContainer} /> */}
     </>

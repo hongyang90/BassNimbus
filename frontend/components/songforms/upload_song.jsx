@@ -129,10 +129,11 @@ class UploadSong extends React.Component {
                                         </label>
                                         <input name='songupload' id='songupload' required type="file" accept='audio/*' onChange={this.handleSound} />
                                     </div>
-                                    {this.showLoading()}
-                                    {/* <div className='upload3'>
-                                        <input type="submit" value="Upload My Track" />
-                                    </div> */}
+                                    <div className='loading'>
+                                        {this.showLoading()}
+
+                                    </div>
+                                  
                                 </form>
 
                                

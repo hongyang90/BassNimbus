@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Music from './music';
-import {play, pauseSong} from '../../actions/music_actions';
+import MusicPlayer from './musicplayer';
+import { play, pauseSong } from '../../actions/music_actions';
 
 const msp = state => ({
     songUrl: state.music.songUrl,
@@ -13,4 +13,4 @@ const mdp = dispatch => ({
     pauseSong: () => dispatch(pauseSong())
 });
 
-export default connect(msp, mdp)(Music);
+export default connect(msp, mdp)(MusicPlayer);

@@ -31,6 +31,10 @@ class Music extends React.Component {
         this.audio.pause();
     }
 
+    setVolume(e) {
+        this.audio.volume = parseFloat(e.target.value) ;
+    }
+
     // window.addEventListener('play', () => {
     //     this.setState({play: true, pause: false});
     // });
@@ -41,6 +45,9 @@ class Music extends React.Component {
                 <button onClick={this.play}>Play</button>
                 <button onClick={this.pause}>Pause</button>
                 {/* <audio  controls src={this.url}>Audio</audio> */}
+                <div>
+                    <input type='range' min={0} max={1} step='any' value={this.audio.volume} onChange={this.setVolume.bind(this)} />
+                </div>
             </div>
         );
     }

@@ -19,7 +19,12 @@ class Button extends React.Component {
 
     handleClickPlay() {
         // this.setState({play: true});
-        this.props.playSong(this.props.song.soundUrl);
+        if (this.props.songUrl === this.props.song.soundUrl) {
+            this.props.play();
+        } else {
+            this.props.playSong(this.props.song.soundUrl);
+            
+        }
     }
 
     handleClickPause() {
