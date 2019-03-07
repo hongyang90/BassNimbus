@@ -15,8 +15,11 @@ class UserShow extends React.Component {
 
     componentDidUpdate(prevProps) {
         // let id = this.props.match.params.userId;
-
         // this.props.fetchUser(id);
+
+        // if (prevProps.songs.length !== this.props.songs.length) {
+        //     this.render();
+        // }
 
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
             this.props.fetchUser(this.props.match.params.userId);

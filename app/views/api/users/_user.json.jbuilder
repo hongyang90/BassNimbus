@@ -15,9 +15,9 @@ json.songs do
         json.set! song.id do
             json.extract! song, :id, :title, :artist_id
             if song.sound.attached?
-                json.soundURL url_for(song.sound)
+                json.soundUrl url_for(song.sound)
             else
-                json.soundURL ''
+                json.soundUrl ''
             end
             if song.photo.attached?
                 json.photoUrl url_for(song.photo)  
