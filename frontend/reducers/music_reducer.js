@@ -3,13 +3,13 @@ import {RECEIVE_ALL_SONGS} from '../actions/song_actions';
 import { RECEIVE_USER } from '../actions/user_actions';
 
 
-const initialState = {playState: false, songUrl: null, tracklist: [] };
+const initialState = {playState: false, songUrl: null, songId: null, tracklist: [] };
 
 const musicReducer = (oldState = initialState, action) => {
     Object.freeze(oldState);
     switch (action.type) {
         case PLAYSONG:
-            return Object.assign({}, oldState, {songUrl: action.songUrl }, {playState: true});
+            return Object.assign({}, oldState, {songUrl: action.songUrl }, {songId: action.songId}, {playState: true});
         case PAUSE:
             return Object.assign({}, oldState, { playState: false });
         case PLAY:

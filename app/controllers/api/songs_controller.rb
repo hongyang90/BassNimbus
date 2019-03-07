@@ -2,7 +2,7 @@ class Api::SongsController < ApplicationController
     # before_action :require_login
 
     def index
-      @songs = Song.all 
+      @songs = Song.all.sample(16) 
       render 'api/songs/index'
     end
 

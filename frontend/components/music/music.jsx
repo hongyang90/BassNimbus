@@ -4,7 +4,7 @@ import React from 'react';
 class Music extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {play: false, pause: true , currentTime: null};
+        this.state = {volume: 0.8};
         this.audio = new Audio();
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
@@ -26,7 +26,7 @@ class Music extends React.Component {
         
     }
 
-    
+
 
     play() {
         this.audio.play();
@@ -40,6 +40,7 @@ class Music extends React.Component {
 
     setVolume(e) {
         this.audio.volume = parseFloat(e.target.value);
+        this.setState({volume: this.audio.volume });
     }
 
     togglePlay () {
@@ -55,6 +56,24 @@ class Music extends React.Component {
         }
     }
 
+    displaySongInfo () {
+        let currentSong = this.props.currentSong;
+        if (currentSong === undefined) {
+            return(
+                <div>
+                    No Song Playing
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <div>{currentSong.title}</div>
+                    <div><img src={currentSong.photoUrl}/></div>
+                </div>
+            )
+        }
+    }
+
 
 
     render() {
@@ -65,8 +84,10 @@ class Music extends React.Component {
                 <div onClick={this.pause}><i className="fas fa-pause"></i></div> */}
 
                 <div>
-                    <input type='range' min={0} max={1} step='any' value={this.audio.volume} onChange={this.setVolume.bind(this)} />
+                    <i className="fas fa-volume-up"></i>
+                    <input type='range' min={0} max={1} step='any' value={this.state.volume} onChange={this.setVolume.bind(this)} />
                 </div>
+                {this.displaySongInfo()}
             </div>
         );
     }

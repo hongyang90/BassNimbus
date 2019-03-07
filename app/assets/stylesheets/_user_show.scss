@@ -194,3 +194,12 @@
  .songbuttonpause:hover, .songbuttonplay:hover {
                 cursor: pointer;
             }
+
+
+.user404 {
+    height: 100%vw;
+    width: 100%vw;
+    background-image: image-url();
+    background-size: cover;
+    background-repeat: no-repeat
+}

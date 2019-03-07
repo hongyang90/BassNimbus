@@ -11,18 +11,13 @@ class Button extends React.Component {
         this.handleClickPlay = this.handleClickPlay.bind(this);
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if () {
-
-    //     }
-    // }
 
     handleClickPlay() {
         // this.setState({play: true});
         if (this.props.songUrl === this.props.song.soundUrl) {
             this.props.play();
         } else {
-            this.props.playSong(this.props.song.soundUrl);
+            this.props.playSong(this.props.song);
             
         }
     }

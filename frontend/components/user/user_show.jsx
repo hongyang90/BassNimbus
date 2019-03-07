@@ -46,7 +46,7 @@ class UserShow extends React.Component {
         
         if (this.props.errors.length !== 0) {
             return (
-               <div>404 Page not found</div>
+               <div className='user404'>404 Page not found</div>
             )
         }
 

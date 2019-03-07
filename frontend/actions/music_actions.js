@@ -2,9 +2,10 @@ export const PLAY = 'PLAY';
 export const PAUSE = 'PAUSE';
 export const PLAYSONG = 'PLAYSONG';
 
-export const playSong = (songUrl) => ({
+export const playSong = (song) => ({
     type: PLAYSONG,
-    songUrl
+    songUrl: song.soundUrl,
+    songId: song.id
     // play: true
 });
 
