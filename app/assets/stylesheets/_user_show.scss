@@ -197,9 +197,9 @@
 
 
 .user404 {
-    height: 100%vw;
-    width: 100%vw;
-    background-image: image-url();
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    background-image: image-url('404.png');
     background-size: cover;
     background-repeat: no-repeat
 }

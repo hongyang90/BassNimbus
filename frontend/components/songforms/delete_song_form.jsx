@@ -10,7 +10,8 @@ class DeleteSongForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.deleteSong(this.songId)
-            .then(() => this.props.closeModal());
+            .then(() => window.location.reload())
+            // .then(() => this.props.closeModal());
     }
 
 
