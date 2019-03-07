@@ -14,13 +14,11 @@ class Splash extends React.Component {
 
     render() {
         let users = this.props.users;
-        let shuffled = this.props.songs.sort(() => 0.5 - Math.random());
-        let songs = shuffled.slice(0,12).map(el => {
+        // const shuffled = this.props.songs.sort(() => 0.5 - Math.random());
+        let songs = this.props.songs.slice(0,12).map(el => {
             return (
                 <div key={el.id}>
                     <SongIndexItem key={el.id} song={el} users={this.props.users} />
-                    {/* <img key={el.id} src={el.photoUrl} /> */}
-                    {/* <audio ref="audio_tag" src={el.soundUrl} controls autoPlay /> */}
                 </div>
             )
         });

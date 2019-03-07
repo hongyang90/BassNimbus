@@ -5,13 +5,13 @@ class Music extends React.Component {
     constructor(props) {
         super(props);
         // this.state = {play: false, pause: true , currentTime: null};
-        // this.url = "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--36e9f169e68f4f9153889063f154b47715455a8b/1.m4a";
-        // this.url = this.props.songUrl;
         this.audio = new Audio();
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
     }
-     
+
+   
+
     componentDidUpdate(prevProps) {
         this.audio.src = this.props.songUrl;
         if (this.props.playState) {
@@ -21,30 +21,42 @@ class Music extends React.Component {
         }
     }
 
-    play () {
-        // this.setState({ play: true, pause: false });
+    play() {
         this.audio.play();
+        // this.props.play();
     }
 
-    pause () {
-        // this.setState({ play: false, pause: true });
+    pause() {
         this.audio.pause();
+        // this.props.pauseSong();
     }
 
     setVolume(e) {
-        this.audio.volume = parseFloat(e.target.value) ;
+        this.audio.volume = parseFloat(e.target.value);
     }
 
-    // window.addEventListener('play', () => {
-    //     this.setState({play: true, pause: false});
-    // });
+    // togglePlay () {
+    //     if (this.audio.paused === false) {
+    //         return (
+    //             <div onClick={this.pause}><i className="fas fa-pause"></i></div>
+    //         )
+    //     } else {
+    //         return (
+    //             <div onClick={this.play}><i className="fas fa-play"></i></div>
+
+    //         )
+    //     }
+    // }
+
+
 
     render() {
         return (
             <div className='musicplayer'>
-                <button onClick={this.play}>Play</button>
-                <button onClick={this.pause}>Pause</button>
-                {/* <audio  controls src={this.url}>Audio</audio> */}
+
+                <div onClick={this.play}><i className="fas fa-play"></i></div>
+                <div onClick={this.pause}><i className="fas fa-pause"></i></div>
+
                 <div>
                     <input type='range' min={0} max={1} step='any' value={this.audio.volume} onChange={this.setVolume.bind(this)} />
                 </div>
