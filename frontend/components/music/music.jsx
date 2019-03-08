@@ -90,8 +90,8 @@ class Music extends React.Component {
     }
 
     unmute() {
-        this.audio.volume = 0.8;
-        this.setState({volume: 0.8})
+        this.audio.volume = 1;
+        this.setState({volume: 1})
     }
 
     renderVolume() {

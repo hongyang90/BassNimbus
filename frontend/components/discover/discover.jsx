@@ -13,7 +13,22 @@ class Discover extends React.Component {
 
     render() {
         let songs = this.props.songs;
-        let users = this.props.users;
+        let users = Object.values(this.props.users);
+
+        if (users === undefined) {
+            return (<div></div> )
+        } else {
+            users = users.slice(0,4).map(user => {
+                return (
+                    <div className='userslist'> 
+                        <Link to={`/users/${user.id}`}><img src={user.photoUrl} alt="" /></Link>
+                        <Link to={`/users/${user.id}`}><div>{user.username}</div></Link>
+                    </div>
+                )
+            
+        })}
+    
+
 
         if (songs === undefined && users === undefined) {
             return (
@@ -95,6 +110,12 @@ class Discover extends React.Component {
                                 </div>
                                 
                                 <div className='rightside'>
+                                    <div className='whotofollow'>
+                                        <div className='followtext'>Who to follow</div>
+                                        <div className='follows'>
+                                            {users}
+                                        </div>
+                                    </div>
                                     <a className='linkedin' href="https://www.linkedin.com/in/hongyang-gao-11525b66/"><i className="fab fa-linkedin"></i></a>
                                     <a href="https://github.com/hongyang90/BassNimbus"><i className="fab fa-github"></i></a>
                                 </div>

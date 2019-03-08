@@ -70,9 +70,10 @@
         justify-content: flex-start;
         align-items: center;
         width: inherit;
-        padding-top: 135px;
+        padding-top: 50px;
 
         .linkedin {
+        margin-top: 150px;
          margin-bottom: 175px;
         }
 
@@ -83,6 +84,50 @@
         i:hover {
             color: black;
         }
+
+        .whotofollow {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+
+            .followtext {
+                width: 100%;
+                color: gray;
+                font-size: 14px;
+                border-bottom: 1px solid lightgray;
+                height: 20px;
+            }
+
+            .follows {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+
+                .userslist {
+                    width: 300px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    color: black;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                }
+
+            }
+
+        }
+
     }
 }
 

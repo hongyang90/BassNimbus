@@ -13,8 +13,6 @@ User.destroy_all
 user1 = User.create(username: "Hong", password: "hongyang90")
 user1.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/me.jpg'), filename: 'me.jpg')
 
-user2 = User.create(username: "DemoUser", password: "password")
-user2.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/demo.jpg'), filename: 'demo.jpg')
 
 user3 = User.create(username: "Kevin", password: "kevin1")
 user3.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/kevin.jpg'), filename: 'kevin.jpg')
@@ -25,6 +23,8 @@ user4.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/
 user5 = User.create(username: "Charles", password: "charles1")
 user5.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/charles.jpg'), filename: 'charles.jpg')
 
+user2 = User.create(username: "DemoUser", password: "password")
+user2.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/demo.jpg'), filename: 'demo.jpg')
  
 Song.destroy_all
 
