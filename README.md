@@ -49,6 +49,11 @@ export const pauseSong = () => ({
 
 ![alt-text](https://s3-us-west-1.amazonaws.com/bassnimbus-seed/picture3.png)
 
+BassNimbus allows users to sign up and have their own personalized user page. The user page shows all songs uploaded by the user and allows the user to edit and delete only their own songs. The edit and delete forms are displayed as modals on the current user show page and will cause a re-render of the page once an action has been dispatched. An example of the edit form is shown below.
+
+![alt-text](https://s3-us-west-1.amazonaws.com/bassnimbus-seed/picture4.png)
+
+
 
 
 
