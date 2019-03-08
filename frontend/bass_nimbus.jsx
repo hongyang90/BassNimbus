@@ -12,11 +12,11 @@ import * as songapi from './util/song_api_util';
 import {fetchUser} from './actions/user_actions';
 
 
-window.fetchUser = fetchUser;
-window.createSong = songActions.createSong;
+// window.fetchUser = fetchUser;
+// window.createSong = songActions.createSong;
 // window.getsongs = songActions.fetchSongs;
-window.getsongs = songapi.fetchSongs;
-window.getsong = songActions.fetchSong;
+// window.getsongs = songapi.fetchSongs;
+// window.getsong = songActions.fetchSong;
 
 // window.login = session_actions.login;
 // window.logout = session_actions.logout;
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     }
 
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
 
 
     ReactDOM.render(<Root store={store}/>, root );

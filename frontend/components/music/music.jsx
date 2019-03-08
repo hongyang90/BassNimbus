@@ -21,7 +21,7 @@ class Music extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-
+       
         if (this.props.playState && prevProps.songUrl !== this.props.songUrl) {
 
             this.audio.src = this.props.songUrl;

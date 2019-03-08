@@ -6,7 +6,7 @@
     position: fixed;
     bottom: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     z-index: 2;
 
@@ -38,6 +38,11 @@
             text-overflow: ellipsis;
 
         }
+    }
+
+    .volume {
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .progressBar {

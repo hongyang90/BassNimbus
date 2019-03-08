@@ -15,13 +15,7 @@ class UserShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // let id = this.props.match.params.userId;
-        // this.props.fetchUser(id);
-
-        // if (prevProps.songs.length !== this.props.songs.length) {
-        //     this.render();
-        // }
-
+       
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
             this.props.fetchUser(this.props.match.params.userId);
         }
@@ -58,7 +52,6 @@ class UserShow extends React.Component {
     }
 
     render() {
-        // this user should be the fetched user not current user
         const user = this.props.user;
         
         if (this.props.errors.length !== 0) {
