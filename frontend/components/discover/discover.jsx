@@ -94,7 +94,11 @@ class Discover extends React.Component {
                                     </div>
         
                                 </div>
-        
+                                
+                                <div className='rightside'>
+                                    <a className='linkedin' href="https://www.linkedin.com/in/hongyang-gao-11525b66/"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/hongyang90/BassNimbus"><i class="fab fa-github"></i></a>
+                                </div>
         
         
         

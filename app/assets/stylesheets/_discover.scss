@@ -63,6 +63,27 @@
         }
 
     }
+
+    .rightside {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: inherit;
+        padding-top: 135px;
+
+        .linkedin {
+         margin-bottom: 175px;
+        }
+
+        i {
+            color: lightgray;
+            font-size: 150px
+        }
+        i:hover {
+            color: black;
+        }
+    }
 }
 
 

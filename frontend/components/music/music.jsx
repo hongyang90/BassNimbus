@@ -14,7 +14,10 @@ class Music extends React.Component {
     }
 
     setDuration(e) {
-        this.setState({ duration: e.target.duration });
+        let minutes = "" + Math.floor(e.target.duration / 60);
+        let seconds = "0" + Math.floor(e.target.duration % 60);
+        let time = minutes.substr(-2) + ':' +seconds.substr(-2);
+        this.setState({ duration: time });
     }
 
     componentDidUpdate(prevProps) {
@@ -35,6 +38,7 @@ class Music extends React.Component {
 
     play() {
         this.audio.play();
+        
         this.props.play();
     }
 
