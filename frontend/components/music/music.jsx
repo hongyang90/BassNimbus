@@ -112,14 +112,13 @@ class Music extends React.Component {
         return (
             <div id='musicplayer'>
                 {this.togglePlay()}
-                <div className='progressBar'>
+                {/* <div className='progressBar'>
                     <p id='currenttime'></p>
                     <progress min={0} max={1} value={this.state.played}></progress>
                     <p id='totaltime'>{this.state.duration}</p>
-                </div>
+                </div> */}
                 <div className='volume'>
                     {this.renderVolume()}
-                    {/* <i className="fas fa-volume-up"></i> */}
                     <input type='range' min={0} max={1} step='any' value={this.state.volume} onChange={this.setVolume.bind(this)} />
                 </div>
                 {this.displaySongInfo()}

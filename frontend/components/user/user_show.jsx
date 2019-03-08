@@ -41,7 +41,7 @@ class UserShow extends React.Component {
     }
 
 
-    displayActions () {
+    displayActions (el) {
         if (this.props.currentUser === this.props.user.id) {
             return (
                 <div className='actions'>
@@ -86,7 +86,7 @@ class UserShow extends React.Component {
                             </div>
                             <div className='waveform'></div>
                         </div>
-                        {this.displayActions()}
+                        {this.displayActions(el)}
                         {/* <div className='actions'>
                             <div onClick={() => this.props.openModal('editsong', el)}><i className="fas fa-edit"></i></div>
                             <br/>
