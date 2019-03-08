@@ -24,7 +24,6 @@ class Discover extends React.Component {
                     return (
                         <div key={song.id}>
                             <SongIndexItem key={song.id} song={song} users={this.props.users} />
-                            {/* <div className='songname'>{el.title}</div> */}
         
                         </div>
                     )
@@ -96,8 +95,8 @@ class Discover extends React.Component {
                                 </div>
                                 
                                 <div className='rightside'>
-                                    <a className='linkedin' href="https://www.linkedin.com/in/hongyang-gao-11525b66/"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://github.com/hongyang90/BassNimbus"><i class="fab fa-github"></i></a>
+                                    <a className='linkedin' href="https://www.linkedin.com/in/hongyang-gao-11525b66/"><i className="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/hongyang90/BassNimbus"><i className="fab fa-github"></i></a>
                                 </div>
         
         

@@ -38,7 +38,6 @@ class Music extends React.Component {
 
     play() {
         this.audio.play();
-        
         this.props.play();
     }
 
@@ -85,6 +84,28 @@ class Music extends React.Component {
         }
     }
 
+    mute() {
+        this.audio.volume = 0;
+        this.setState({volume: 0})
+    }
+
+    unmute() {
+        this.audio.volume = 0.8;
+        this.setState({volume: 0.8})
+    }
+
+    renderVolume() {
+        if (this.audio.volume === 0) {
+            return (
+                <i onClick={this.unmute.bind(this)} class="fas fa-volume-mute"></i>
+                )
+            } else {
+                return (
+                    <i onClick={this.mute.bind(this)} className="fas fa-volume-up"></i>
+            )
+        }
+    }
+
 
 
     render() {
@@ -94,11 +115,11 @@ class Music extends React.Component {
                 <div className='progressBar'>
                     <p id='currenttime'></p>
                     <progress min={0} max={1} value={this.state.played}></progress>
-                    {/* <progress type='range' min={0} max={1} value={this.state.played} /> */}
                     <p id='totaltime'>{this.state.duration}</p>
                 </div>
                 <div className='volume'>
-                    <i className="fas fa-volume-up"></i>
+                    {this.renderVolume()}
+                    {/* <i className="fas fa-volume-up"></i> */}
                     <input type='range' min={0} max={1} step='any' value={this.state.volume} onChange={this.setVolume.bind(this)} />
                 </div>
                 {this.displaySongInfo()}
