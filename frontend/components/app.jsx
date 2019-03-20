@@ -13,13 +13,14 @@ import DiscoverContainer from './discover/discover_container';
 import MusicContainer from '../components/music/music_container';
 import UploadSongContainer from '../components/songforms/upload_song_container';
 import MusicPlayerContainer from '../components/music/music_player_container';
-
+import SongShowContainer from '../components/song_page/song_show_container';
 
 const App = () => (
     <>
         <Modal/>
         <Switch >
             <ProtectedRoute exact path='/discover' component={DiscoverContainer}/>
+            <ProtectedRoute exact path='/songs/:songId' component={SongShowContainer} />
             <ProtectedRoute exact path='/users/:userId' component={UserShowContainer}/>
             <ProtectedRoute exact path='/upload' component={UploadSongContainer}/>
             <AuthRoute exact path='/' component={SplashContainer}/>
