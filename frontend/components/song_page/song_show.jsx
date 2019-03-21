@@ -10,12 +10,14 @@ class SongShow extends React.Component {
     componentDidMount() {
         let id = this.props.match.params.songId;
         this.props.fetchSong(id);
+        this.props.fetchUsers();
     }
 
     componentDidUpdate(prevProps) {
-        // if (prevProps.match.params.songId !== this.props.match.params.songId) {
-        //     this.props.fetchSong(this.props.match.params.songId);
-        // }
+        if (prevProps.match.params.songId !== this.props.match.params.songId) {
+            this.props.fetchSong(this.props.match.params.songId);
+            
+        }
     }
 
     render() {
@@ -23,8 +25,13 @@ class SongShow extends React.Component {
         if (song === undefined) {
             return(
                 <div></div>
-            )
-        } else {
+                )
+            } 
+        else {
+                let artist = this.props.users[this.props.song.artistId];
+                console.log(song)  
+                console.log(this.props.users)
+                console.log(artist)
             return(
               <Layout >
                   <div className='songshow'>
@@ -32,7 +39,7 @@ class SongShow extends React.Component {
                         <div className='songbannerleft'>
                             <ButtonContainer song={song}/>
                             <div className='songinfo'>
-                                <div className='artistname'>Artist Name</div>
+                                <div className='artistname'>artistname</div>
                                 <div className='songtitle'>{song.title}</div>
                             </div>
                         </div>

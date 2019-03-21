@@ -20,28 +20,62 @@
     }
     
     .songbuttonplay {
-        position: absolute;
+        // position: absolute;
         display: block;
-        height: 60px;
-        width: 60px;
+        height: 70px;
+        width: 70px;
         background-image: image-url('playbutton.png');
         background-size: cover;
         background-repeat: no-repeat;
+        margin-right: 15px;
     }
 
      .songbuttonpause {
-        position: absolute;
+        // position: absolute;
         display: block;
-        height: 60px;
-        width: 60px;
+        height: 70px;
+        width: 70px;
         background-image: image-url('pause.png');
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 1;
-    
+        margin-right: 15px;
 
     }
 }
+
+.songbannerleft {
+    padding: 10px;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 40px;
+    margin-top: 30px;
+    
+
+    .artistname {
+        background: black;
+        color: gray;
+        height: 25px;
+        margin-bottom: 6px;
+        font-size: 16px;
+        display: flex;
+        padding: 2px 5px 2px 5px;
+        width: fit-content;
+        align-items: center;
+    }
+
+    .songtitle {
+        display: flex;
+        align-items: center;
+        color: white;
+        background: black;
+        height: 40px;
+        padding: 3px 10px 3px 10px;
+        font-size: 25px;
+        max-width: 350px;
+    }
+}
+
 
 .songshowcontent {
     background: white;
