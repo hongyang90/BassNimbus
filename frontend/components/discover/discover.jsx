@@ -20,7 +20,7 @@ class Discover extends React.Component {
         } else {
             users = users.slice(0,4).map(user => {
                 return (
-                    <div className='userslist'> 
+                    <div className='userslist' key={user.id}> 
                         <Link to={`/users/${user.id}`}><img src={user.photoUrl} alt="" /></Link>
                         <Link to={`/users/${user.id}`}><div>{user.username}</div></Link>
                     </div>

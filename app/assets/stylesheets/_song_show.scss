@@ -1,0 +1,50 @@
+.songshow {
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.songbanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1240px;
+    height: 380px;
+    background-image: linear-gradient(to right, #d1d2d8, #1e3cd4);
+
+    .songimg {
+        width: 340px;
+        height: 340px;
+        margin-right: 20px;
+    }
+    
+    .songbuttonplay {
+        position: absolute;
+        display: block;
+        height: 60px;
+        width: 60px;
+        background-image: image-url('playbutton.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+     .songbuttonpause {
+        position: absolute;
+        display: block;
+        height: 60px;
+        width: 60px;
+        background-image: image-url('pause.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    
+
+    }
+}
+
+.songshowcontent {
+    background: white;
+    width: 1240px;
+    height: 1000px;
+}
