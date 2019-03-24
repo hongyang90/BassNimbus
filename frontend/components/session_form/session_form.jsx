@@ -100,6 +100,9 @@ class sessionForm extends React.Component{
                 <br/>
                 
                     <input className='modalsubmit' type="submit" value={this.props.formType}/>
+                    <p>{this.props.formType === 'Sign Up' ? 'Already a User?' : 'New to the Site?'}</p>
+                    <button className='modalsubmit' >{this.props.otherForm} </button>
+                    <p>Try out the site first by clicking below</p>                
                     <input className='modalsubmit' type="submit" value='Demo User' onClick={this.handleDemo} /> 
 
             </form>
