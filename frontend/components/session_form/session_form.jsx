@@ -7,6 +7,7 @@ class sessionForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
         this.demoLogin2 = this.demoLogin2.bind(this);
+        this.handleSwitchForm = this.handleSwitchForm.bind(this);
     }
 
     handleSubmit(e) {
@@ -85,6 +86,12 @@ class sessionForm extends React.Component{
         );
     }
 
+    handleSwitchForm(e) {
+        e.preventDefault();
+        this.props.closeModal()
+        this.props.openModal(this.props.otherModal);
+    }
+
 
     render () {
         return (
@@ -101,8 +108,8 @@ class sessionForm extends React.Component{
                 
                     <input className='modalsubmit' type="submit" value={this.props.formType}/>
                     <p>{this.props.formType === 'Sign Up' ? 'Already a User?' : 'New to the Site?'}</p>
-                    <button className='modalsubmit' >{this.props.otherForm} </button>
-                    <p>Try out the site first by clicking below</p>                
+                    <div className='modalsubmit' onClick={this.handleSwitchForm}>{this.props.otherForm} </div>
+                    <p>Or try out the site first by clicking below</p>                
                     <input className='modalsubmit' type="submit" value='Demo User' onClick={this.handleDemo} /> 
 
             </form>

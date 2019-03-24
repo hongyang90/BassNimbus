@@ -74,13 +74,17 @@
 }
 
 
-.modal-child .sessionform {
+.modal-child .sessionForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
   
+}
+
+.sessionForm {
+  margin-top: 20%;
 }
 
  
