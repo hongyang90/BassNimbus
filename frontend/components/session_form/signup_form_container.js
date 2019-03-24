@@ -15,8 +15,6 @@ const msp = state => ({
 const mdp = dispatch => ({
     action: user => dispatch(signup(user)),
     login: user => dispatch(login(user)),
-    // otherAction: user => dispatch(login(user)),
-    
     closeModal: () => dispatch(closeModal()),
     openModal: (modal) => dispatch(openModal(modal))
 });
