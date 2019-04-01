@@ -9,29 +9,34 @@ class SongShow extends React.Component {
 
     componentDidMount() {
         let id = this.props.match.params.songId;
-        this.props.fetchSong(id);
-        this.props.fetchUsers();
+        this.props.fetchUsers().then(() => this.props.fetchSong(id))
+        
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.songId !== this.props.match.params.songId) {
             this.props.fetchSong(this.props.match.params.songId);
-            
+            // this.props.fetchUsers();
         }
     }
 
     render() {
         let song = this.props.song;
-        if (song === undefined) {
+        // let comments = this.props.comments;
+     
+        if (song === undefined ) {
             return(
                 <div></div>
                 )
             } 
         else {
-                let artist = this.props.users[this.props.song.artistId];
-                console.log(song)  
+            let artist = this.props.users[this.props.song.artistId];
+                console.log(song.artistId)  
                 console.log(this.props.users)
-                console.log(artist)
+                console.log('artist')
+            let currentUser = this.props.users[this.props.currentUserId];
+                console.log(this.props.currentUserId)
+                
             return(
               <Layout >
                   <div className='songshow'>
@@ -39,7 +44,7 @@ class SongShow extends React.Component {
                         <div className='songbannerleft'>
                             <ButtonContainer song={song}/>
                             <div className='songinfo'>
-                                <div className='artistname'>artistname</div>
+                                <div className='artistname'>{artist.username}</div>
                                 <div className='songtitle'>{song.title}</div>
                             </div>
                         </div>
@@ -48,7 +53,19 @@ class SongShow extends React.Component {
                         </div>
                     </div>
                     <div className='songshowcontent'>
-    
+                        <div className='songshowcontentsub'>
+                            <div className='commentinput'>
+
+                            </div>
+                            <div>
+                                <div>
+
+                                </div>
+                                <div className='commentlist'>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                   </div>
               </Layout>

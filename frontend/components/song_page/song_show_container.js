@@ -8,8 +8,9 @@ const msp = (state, ownProps) => {
     return {
     song: song,
     users: state.entities.users,
+    comments: Object.values(state.entities.comments),
+    currentUserId: state.session.id
       
-    // add comments here from payload
 }};
 
 const mdp = dispatch => ({
