@@ -4,6 +4,7 @@ export const RECEIVE_ALL_SONGS = 'RECEIVE_ALL_SONGS';
 export const RECEIVE_SONG = 'RECEIVE_SONG';
 export const REMOVE_SONG = 'REMOVE_SONG';
 export const RECEIVE_SONG_ERRORS = 'RECEIVE_SONG_ERRORS';
+export const RECEIVE_ONE_SONG = 'RECEIVE_ONE_SONG';
 
 const receiveAllSongs = songs => ({
     type: RECEIVE_ALL_SONGS,
@@ -13,6 +14,11 @@ const receiveAllSongs = songs => ({
 const receiveSong = song => ({
     type: RECEIVE_SONG,
     song
+});
+
+const receiveOneSong = payload => ({
+    type: RECEIVE_ONE_SONG,
+    payload
 });
 
 const removeSong = songId => ({
@@ -31,7 +37,7 @@ export const fetchSongs = () => dispatch => (
 );
 
 export const fetchSong = id => dispatch => (
-    SongAPI.fetchSong(id).then(song => dispatch(receiveSong(song)))
+    SongAPI.fetchSong(id).then(payload => dispatch(receiveOneSong(payload)))
 );
 
 export const createSong = song => dispatch => {

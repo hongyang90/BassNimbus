@@ -1,4 +1,4 @@
-import {RECEIVE_SONG,RECEIVE_ALL_SONGS,REMOVE_SONG} from '../actions/song_actions';
+import {RECEIVE_SONG,RECEIVE_ALL_SONGS,REMOVE_SONG,RECEIVE_ONE_SONG} from '../actions/song_actions';
 import {RECEIVE_USER} from '../actions/user_actions';
 
 const SongsReducer = (oldState = {}, action) => {
@@ -14,6 +14,8 @@ const SongsReducer = (oldState = {}, action) => {
             return newState;
         case RECEIVE_USER:
             return Object.assign(newState, action.payload.songs);
+        case RECEIVE_ONE_SONG:
+            return Object.assign(newState, action.payload.song);            
         default:
             return oldState;
     }

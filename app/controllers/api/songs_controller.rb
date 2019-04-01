@@ -8,7 +8,7 @@ class Api::SongsController < ApplicationController
 
     def show
       @song = Song.find(params[:id])
-      render 'api/songs/show'
+      render 'api/songs/showpage'
     end
 
     def create
