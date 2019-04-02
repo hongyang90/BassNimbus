@@ -13,8 +13,8 @@ const removeComment = commentId => ({
     commentId
 });
 
-export const createComment = comment => dispatch => (
-    CommentAPI.createComment(comment).then(comment => dispatch(receiveComment(comment)))
+export const createComment = (comment, songId) => dispatch => (
+    CommentAPI.createComment(comment, songId).then(comment => dispatch(receiveComment(comment)))
 );
 
 export const deleteComment = commentId => dispatch => (

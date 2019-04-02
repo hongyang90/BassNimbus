@@ -4,7 +4,9 @@ import ButtonContainer from '../music/button_container';
 
 class SongShow extends React.Component {
     constructor(props) {
-        super(props);
+        super(props);   
+        this.state = {body: '' };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -18,6 +20,16 @@ class SongShow extends React.Component {
             this.props.fetchSong(this.props.match.params.songId);
             // this.props.fetchUsers();
         }
+    }
+    
+    handleSubmit(e) {
+        e.preventDefault();
+        let id = this.props.match.params.songId;
+        this.props.createComment(this.state, id ).then(() => this.setState({body: ''}));
+    }
+
+    updateInput() {
+        return e => this.setState({body: e.currentTarget.value});
     }
 
     render() {
@@ -55,7 +67,10 @@ class SongShow extends React.Component {
                     <div className='songshowcontent'>
                         <div className='songshowcontentsub'>
                             <div className='commentinput'>
-
+                                <form onSubmit={this.handleSubmit} >
+                                    <img src={currentUser.photoUrl} alt=""/>
+                                    <input type="text" placeholder='Write a Comment' onChange={this.updateInput()} value={this.state.body}/>
+                                </form>
                             </div>
                             <div>
                                 <div>
