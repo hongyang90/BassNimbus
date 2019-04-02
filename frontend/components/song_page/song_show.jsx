@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../layout/layout';
 import ButtonContainer from '../music/button_container';
+import {Link} from 'react-router-dom';
+import CommentIndexItem from './comment_index_item';
 
 class SongShow extends React.Component {
     constructor(props) {
@@ -44,8 +46,16 @@ class SongShow extends React.Component {
         else {
             let artist = this.props.users[this.props.song.artistId];
             let currentUser = this.props.users[this.props.currentUserId];
-            let number = this.props.comments;
-            console.log(number.length)
+            let comments = this.props.comments;
+
+            let mapped = comments.map(el => {
+                return (
+                    <div className='parentcomment' key={el.id}>
+                        <CommentIndexItem comment={el} users={this.props.users} deleteComment={this.props.deleteComment}/>
+
+                    </div>
+                )
+            })
 
             return(
               <Layout >
@@ -54,7 +64,7 @@ class SongShow extends React.Component {
                         <div className='songbannerleft'>
                             <ButtonContainer song={song}/>
                             <div className='songinfo'>
-                                <div className='artistname'>{artist.username}</div>
+                                <Link to={`/users/${artist.id}`}><div className='artistname'>{artist.username}</div></Link>
                                 <div className='songtitle'>{song.title}</div>
                             </div>
                         </div>
@@ -74,13 +84,13 @@ class SongShow extends React.Component {
                             </div>
                             <div className='songcontentinfo'>
                                 <div className='artistinfo'>
-                                    <img src={artist.photoUrl} />
-                                    <div>{artist.username}</div>
+                                    <Link to={`/users/${artist.id}`}><img src={artist.photoUrl} /></Link>
+                                    <Link to={`/users/${artist.id}`}><div>{artist.username}</div></Link>
                                 </div>
                                 <div className='commentlist'>
-                                        <div className='commentcount'><i className="fas fa-comment"></i>  {number.length} Comments</div>
-                                    <div>
-
+                                        <div className='commentcount'><i className="fas fa-comment"></i>  {comments.length} Comments</div>
+                                    <div className='commentindexitems'>
+                                        {mapped}
                                     </div>
                                 </div>
                             </div>

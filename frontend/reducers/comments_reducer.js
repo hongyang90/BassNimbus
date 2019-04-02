@@ -11,7 +11,12 @@ const CommentsReducer = (oldState ={}, action) => {
             delete newState[action.commentId.id];
             return newState;
         case RECEIVE_ONE_SONG:
-            return Object.assign(newState, action.payload.comments);
+            if (action.payload.comments === undefined) {
+                return {};
+            } else {
+                return Object.assign({}, action.payload.comments);
+                
+            };
         default:
             return oldState;
     }
