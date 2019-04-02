@@ -5,6 +5,24 @@ import { Link } from 'react-router-dom';
 const CommentIndexItem = (props) => {
 
     let user = props.users[props.comment.userId];
+    let currentUserId = props.currentUserId;
+
+    function displayButton() {
+        if (user.id === currentUserId) {
+            return (
+                <div>
+                    <i className="fas fa-times"></i>
+                </div>
+            )
+        } else {
+            return(
+                <div></div>
+            )
+        }
+    }
+
+
+
 
     return(
         <div className='commentitem'>
@@ -16,7 +34,7 @@ const CommentIndexItem = (props) => {
                 </div>
 
             </div>
-            <div className='deletecomment'><i className="fas fa-trash-alt"></i></div>
+            <div className='deletecomment' onClick={()=> props.deleteComment(props.comment.id)} >{displayButton()}</div>
         </div>
     )
 }

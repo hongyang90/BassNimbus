@@ -51,7 +51,7 @@ class SongShow extends React.Component {
             let mapped = comments.map(el => {
                 return (
                     <div className='parentcomment' key={el.id}>
-                        <CommentIndexItem comment={el} users={this.props.users} deleteComment={this.props.deleteComment}/>
+                        <CommentIndexItem currentUserId={this.props.currentUserId}  comment={el} users={this.props.users} deleteComment={this.props.deleteComment}/>
 
                     </div>
                 )
