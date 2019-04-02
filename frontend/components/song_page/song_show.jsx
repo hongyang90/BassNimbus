@@ -43,12 +43,10 @@ class SongShow extends React.Component {
             } 
         else {
             let artist = this.props.users[this.props.song.artistId];
-                console.log(song.artistId)  
-                console.log(this.props.users)
-                console.log('artist')
             let currentUser = this.props.users[this.props.currentUserId];
-                console.log(this.props.currentUserId)
-                
+            let number = this.props.comments;
+            console.log(number.length)
+
             return(
               <Layout >
                   <div className='songshow'>
@@ -67,17 +65,23 @@ class SongShow extends React.Component {
                     <div className='songshowcontent'>
                         <div className='songshowcontentsub'>
                             <div className='commentinput'>
-                                <form onSubmit={this.handleSubmit} >
-                                    <img src={currentUser.photoUrl} alt=""/>
-                                    <input type="text" placeholder='Write a Comment' onChange={this.updateInput()} value={this.state.body}/>
-                                </form>
+                                <div className='inputwrapper'>
+                                    <form className='commentform' onSubmit={this.handleSubmit} >
+                                        <img className='commentphoto' src={currentUser.photoUrl} alt=""/>
+                                        <input type="text" maxLength='75' placeholder='Write a Comment' onChange={this.updateInput()} value={this.state.body}/>
+                                    </form>
+                                </div>
                             </div>
-                            <div>
-                                <div>
-
+                            <div className='songcontentinfo'>
+                                <div className='artistinfo'>
+                                    <img src={artist.photoUrl} />
+                                    <div>{artist.username}</div>
                                 </div>
                                 <div className='commentlist'>
+                                        <div className='commentcount'><i className="fas fa-comment"></i>  {number.length} Comments</div>
+                                    <div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>

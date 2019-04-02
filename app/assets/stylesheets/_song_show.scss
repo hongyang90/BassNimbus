@@ -54,7 +54,7 @@
 
     .artistname {
         background: black;
-        color: gray;
+        color: #d6d6d6;
         height: 25px;
         margin-bottom: 6px;
         font-size: 16px;
@@ -77,8 +77,106 @@
 }
 
 
+
+
 .songshowcontent {
     background: white;
     width: 1240px;
     height: 1000px;
+    display: flex;
+    // flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+.songshowcontentsub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    
+
+    .commentinput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100px;
+        border-bottom: 1px solid lightgray;
+
+        .inputwrapper{
+            width: 90%;
+            height: 50px;
+            background: #f2f2f2;
+          
+        }
+
+        .commentform {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            input {
+                border-radius: 4px;
+                height: 27px;
+                font-size: 14px;
+                margin: 5px;
+                width: 100%;
+                border: 1px solid lightgray;
+            }
+        }
+
+        .commentphoto {
+            height: 50px;
+            width: 50px;
+        }
+    
+    }
+
+    .songcontentinfo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+        margin-top: 10px;
+
+        .artistinfo {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                height: 120px;
+                width: 120px;
+            }
+        }
+
+
+        .commentlist {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+
+            .commentcount {
+                border-bottom: 1px solid lightgray;
+                width: 90%;
+                color: rgba(122, 114, 114, 1);
+                margin: 50px 0px 10px 0px;
+                padding: 5px;
+            }
+
+
+
+        }
+
+    }
+
+}
+
