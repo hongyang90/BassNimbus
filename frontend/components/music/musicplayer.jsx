@@ -131,7 +131,7 @@ class MusicPlayer extends React.Component {
     render() {
         let { url, playing, controls, volume, muted, loop, played, loaded, duration } = this.state;
         return (
-            <div className='musicplayer'>
+            <div className='musicplayer' >
 
                 <ReactPlayer 
                     url={this.props.songUrl}

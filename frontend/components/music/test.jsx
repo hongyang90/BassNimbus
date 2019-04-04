@@ -127,7 +127,7 @@ class Test extends React.Component {
     }
 
     renderVolume() {
-        if (this.state.volume === 0) {
+        if (this.state.muted ) {
             return (
                 <i onClick={this.toggleMuted} className="fas fa-volume-mute"></i>
             )
@@ -138,9 +138,31 @@ class Test extends React.Component {
         }
     }
 
+    displaySongInfo() {
+        let currentSong = this.props.currentSong;
+        if (currentSong === undefined) {
+            return (
+                <div className='songinfo'>
+
+                </div>
+            )
+        } else {
+            return (
+                <div className='songinfo' >
+                    <div><img src={currentSong.photoUrl} /></div>
+                    <div>
+                        <div className='musicsongtitle'>{currentSong.title}</div>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render () {
         const { url, playing, controls, volume, muted, loop, played, loaded, duration } = this.state
         let current = this.state.playedSeconds;
+        // let totoal = this.state.
+        console.log(duration)
         return (
             <div id='musicplayer'>
                 <ReactPlayer
@@ -151,28 +173,30 @@ class Test extends React.Component {
                     volume={volume}
                     muted={muted}
                     onProgress={this.onProgress}
-                    width='60%'
+                    width='0%'
                     height='0%'
                     onDuration={this.onDuration}
                 
                 />
-                <div>
-                    <div>{this.togglePlay()}</div>
-                    {/* <button onClick={this.playPause}>{playing ? 'Pause' : 'Play'}</button> */}
-                    {/* <progress max={1} value={played} /> */}
-                    <div>{this.Time(current)}</div>
-                    <input
-                        type='range' min={0} max={1} step='any'
-                        value={played}
-                        onMouseDown={this.onSeekMouseDown}
-                        onChange={this.onSeekChange}
-                        onMouseUp={this.onSeekMouseUp}
-                    />
-                    <div>
+                <div className='musiccontent'>
+                    <div className='playpause'>{this.togglePlay()}</div>
+                    <div className='time'>{this.Time(current)}</div>
+                    <div className='progressdiv'>
+                        <input className='progressbar'
+                            type='range' min={0} max={1} step='any'
+                            value={played}
+                            onMouseDown={this.onSeekMouseDown}
+                            onChange={this.onSeekChange}
+                            onMouseUp={this.onSeekMouseUp}
+                            />
+                    </div>
+                    <div className='time'>{this.Time(duration)}</div>
+                    <div className='volumediv'>
                         {this.renderVolume()}
-
-                        <input type='range' min={0} max={1} step='any' value={this.state.volume} onChange={this.setVolume.bind(this)} />
-
+                        <input className='volbar' type='range' min={0} max={1} step='any' value={this.state.volume} onChange={this.setVolume.bind(this)} />
+                    </div>
+                    <div>
+                        {this.displaySongInfo()}
                     </div>
                 </div>
             </div>
