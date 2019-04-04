@@ -14,10 +14,10 @@ const musicReducer = (oldState = initialState, action) => {
             return Object.assign({}, oldState, { playState: false });
         case PLAY:
             return Object.assign({}, oldState, {playState: true} )
-        // case RECEIVE_ALL_SONGS:
-        //     return Object.assign({}, oldState, {tracklist: Object.values(action.songs)});
-        // case RECEIVE_USER:
-        //     return Object.assign({}, oldState, { tracklist: Object.values(action.payload.songs) })
+        case RECEIVE_ALL_SONGS:
+            return Object.assign({}, oldState, {tracklist: Object.values(action.songs)});
+        case RECEIVE_USER:
+            return Object.assign({}, oldState, { tracklist: Object.values(action.payload.songs) })
         default:
             return oldState;
     }

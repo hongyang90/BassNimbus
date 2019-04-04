@@ -7,7 +7,6 @@ class Test extends React.Component {
 
         this.state = {
             url: null,
-            pip: false,
             playing: this.props.playState,
             controls: false,
             volume: 0.8,
@@ -15,8 +14,7 @@ class Test extends React.Component {
             played: 0,
             loaded: 0,
             duration: 0,
-            playbackRate: 1.0,
-            loop: false
+            loop: true
         };
 
         this.playPause = this.playPause.bind(this);
@@ -28,7 +26,7 @@ class Test extends React.Component {
         this.onSeekMouseUp = this.onSeekMouseUp.bind(this);
         this.onDuration = this.onDuration.bind(this);
         this.onProgress = this.onProgress.bind(this);
-        
+        this.skip = this.skip.bind(this);
     }
 
     playPause () {
@@ -81,36 +79,28 @@ class Test extends React.Component {
         this.setState({ duration })
     }
   
-    renderLoadButton (url, label) {
-        return (
-            <button onClick={() => this.load(url)}>
-                {label}
-            </button>
-        )
+    
+
+    skip(song) {
+
+        this.props.playSong(song.soundUrl)
+
     }
 
     ref (player) {
-        this.player = player
+        this.player = player;
     }
 
     Time (time) {
-    // Hours, minutes and seconds
-    // var hrs = ~~(time / 3600);
-    var mins = ~~((time % 3600) / 60);
-    var secs = ~~time % 60;
+    let mins = ~~((time % 3600) / 60);
+    let secs = ~~time % 60;
 
-    // Output like "1:01" or "4:03:59" or "123:03:59"
-    var ret = "";
+    let res = "";
 
-    // if (hrs > 0) {
-    //     ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-    // }
-
-    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-    ret += "" + secs;
-    return ret;
-}
-
+    res += "" + mins + ":" + (secs < 10 ? "0" : "");
+    res += "" + secs;
+    return res;
+    }
 
 
     togglePlay() {
@@ -161,8 +151,10 @@ class Test extends React.Component {
     render () {
         const { url, playing, controls, volume, muted, loop, played, loaded, duration } = this.state
         let current = this.state.playedSeconds;
-        // let totoal = this.state.
-        console.log(duration)
+        // let songs = this.props.tracklist;
+        // console.log(songs)
+        // if (this.props.songUrl === null) return null
+
         return (
             <div id='musicplayer'>
                 <ReactPlayer
@@ -179,7 +171,9 @@ class Test extends React.Component {
                 
                 />
                 <div className='musiccontent'>
+                    <div className='skip'><i className="fas fa-step-backward"></i></div>
                     <div className='playpause'>{this.togglePlay()}</div>
+                    <div className='skip' ><i className="fas fa-step-forward"></i></div>
                     <div className='time'>{this.Time(current)}</div>
                     <div className='progressdiv'>
                         <input className='progressbar'
