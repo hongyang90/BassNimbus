@@ -13,7 +13,7 @@ class SongShow extends React.Component {
 
     componentDidMount() {
         let id = this.props.match.params.songId;
-        this.props.fetchUsers().then(() => this.props.fetchSong(id))
+        this.props.fetchUsers().then(() => this.props.fetchSong(id));
         
     }
 

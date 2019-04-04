@@ -27,8 +27,8 @@ const App = () => (
             <DefaultRoute path='/' component={SplashContainer}/>
 
         </Switch>
-        < MusicContainer />
-        {/* <MusicPlayerContainer /> */}
+        {/* < MusicContainer /> */}
+        <MusicPlayerContainer />
         
         {/* <ProtectedRoute exact path='/discover' component={HeaderContainer} /> */}
     </>
