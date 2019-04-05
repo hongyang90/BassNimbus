@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import MusicPlayer from './musicplayer';
-import Test from './test';
 import { play, pauseSong, playSong } from '../../actions/music_actions';
 
 const msp = state => ({
@@ -18,4 +17,4 @@ const mdp = dispatch => ({
 
 });
 
-export default connect(msp, mdp)(Test);
+export default connect(msp, mdp)(MusicPlayer);

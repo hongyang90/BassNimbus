@@ -72,17 +72,33 @@
         width: inherit;
         padding-top: 50px;
 
-        .linkedin {
-        margin-top: 150px;
-         margin-bottom: 175px;
+        .links {
+            margin-top: 2%;
         }
-
         i {
             color: lightgray;
-            font-size: 150px
+            font-size: 30px;
+            margin: 10px;
         }
         i:hover {
             color: black;
+        }
+
+        .promotion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-top: 20%;
+
+             .followtext {
+                width: 100%;
+                color: gray;
+                font-size: 14px;
+                border-bottom: 1px solid lightgray;
+                height: 20px;
+            }
         }
 
         .whotofollow {
