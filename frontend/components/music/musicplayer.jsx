@@ -62,20 +62,19 @@ class MusicPlayer extends React.Component {
     }
 
     onProgress  (state) {
-        console.log('onProgress', state)
-        // We only want to update time slider if we are not currently seeking
+        // console.log('onProgress', state)
         if (!this.state.seeking) {
             this.setState(state)
         }
     }
 
     onEnded () {
-        console.log('onEnded')
+        // console.log('onEnded')
         this.setState({ playing: this.state.loop })
     }
 
     onDuration (duration) {
-        console.log('onDuration', duration)
+        // console.log('onDuration', duration)
         this.setState({ duration })
     }
   
