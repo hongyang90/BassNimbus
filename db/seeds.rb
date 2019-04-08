@@ -26,19 +26,7 @@ user5.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/
 user2 = User.create(username: "DemoUser", password: "password")
 user2.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/demo.jpg'), filename: 'demo.jpg')
 
-Comment.destroy_all
 
-c1 = Comment.create(body: 'This is sick!', song_id: song1.id, user_id: user1.id)
-c2 = Comment.create(body: 'Great song', song_id: song2.id, user_id: user1.id)
-c3 = Comment.create(body: 'wooo!', song_id: song7.id, user_id: user3.id)
-c4 = Comment.create(body: 'niceee', song_id: song7.id, user_id: user4.id)
-c5 = Comment.create(body: 'my fave', song_id: song17.id, user_id: user1.id)
-c6 = Comment.create(body: 'sweeet', song_id: song17.id, user_id: user5.id)
-c7 = Comment.create(body: 'porterrr!', song_id: song6.id, user_id: user4.id)
-c8 = Comment.create(body: 'amazing', song_id: song6.id, user_id: user3.id)
-c9 = Comment.create(body: 'i love it', song_id: song6.id, user_id: user2.id)
-c10 = Comment.create(body: 'coool', song_id: song5.id, user_id: user5.id)
- 
 Song.destroy_all
 
 song1 = Song.create(title: 'Beautiful Creatures', artist_id: user1.id)
@@ -61,6 +49,7 @@ song16 = Song.create(title: 'Saving Light', artist_id: user5.id)
 song2 = Song.create(title: 'Fractures', artist_id: user1.id)
 song18 = Song.create(title: 'I Need You', artist_id: user3.id)
 song20 = Song.create(title: 'Exterminate', artist_id: user5.id)
+
 
 song1.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/illenium1.jpg'), filename: 'illenium1.jpg')
 song2.photo.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/illenium1.jpg'), filename: 'illenium1.jpg')
@@ -105,3 +94,15 @@ song19.sound.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed
 song20.sound.attach(io: open('https://s3-us-west-1.amazonaws.com/bassnimbus-seed/exterminate.mp3'), filename: 'exterminate.mp3')
 
 
+Comment.destroy_all
+
+c1 = Comment.create(body: 'This is sick!', song_id: song1.id, user_id: user1.id)
+c2 = Comment.create(body: 'Great song', song_id: song2.id, user_id: user1.id)
+c3 = Comment.create(body: 'wooo!', song_id: song7.id, user_id: user3.id)
+c4 = Comment.create(body: 'niceee', song_id: song7.id, user_id: user4.id)
+c5 = Comment.create(body: 'my fave', song_id: song17.id, user_id: user1.id)
+c6 = Comment.create(body: 'sweeet', song_id: song17.id, user_id: user5.id)
+c7 = Comment.create(body: 'porterrr!', song_id: song6.id, user_id: user4.id)
+c8 = Comment.create(body: 'amazing', song_id: song6.id, user_id: user3.id)
+c9 = Comment.create(body: 'i love it', song_id: song6.id, user_id: user2.id)
+c10 = Comment.create(body: 'coool', song_id: song5.id, user_id: user5.id)
