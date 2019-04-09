@@ -231,3 +231,48 @@
     }
 }
 
+// .songshowright {
+//     width: 30%;
+
+// }
+.songshowright {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: inherit;
+        padding-top: 50px;
+        width: 30%;
+
+        .links {
+            margin-top: 2%;
+        }
+        i {
+            color: lightgray;
+            font-size: 30px;
+            margin: 10px;
+        }
+        i:hover {
+            color: black;
+        }
+
+        .promotion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-top: 20%;
+            position: sticky;
+            top: 320px;
+
+             .followtext {
+                width: 100%;
+                color: gray;
+                font-size: 14px;
+                border-bottom: 1px solid lightgray;
+                height: 20px;
+            }
+        }
+}
+
