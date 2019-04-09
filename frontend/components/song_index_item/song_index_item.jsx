@@ -23,9 +23,32 @@ class SongIndexItem extends React.Component {
         }
     }
 
+    splashLink(song) {
+
+        if (this.props.path === '/') {
+            return (
+                <div>
+                    <div className='image'><img src={song.photoUrl} /></div>
+                    <ButtonContainer song={song} />
+                    <div className='songname'>{song.title}</div>
+
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <Link to={`/songs/${song.id}`} ><div className='image'><img src={song.photoUrl} /></div></Link>
+                    <ButtonContainer song={song} />
+                    <Link to={`/songs/${song.id}`}><div className='songname'>{song.title}</div></Link>
+
+                </div>
+            )
+        }
+    }
+
     render() {
         let song = this.props.song;
-        
+        // console.log(this.props.path)
         // // let username = users[song.artist_id].username;
         // if (song === undefined) {
         //     return (<div></div> )
@@ -33,9 +56,10 @@ class SongIndexItem extends React.Component {
 
             return (
                 <div className='splashsongindex'>
-                    <Link to={`/songs/${song.id}`} ><div className='image'><img src={song.photoUrl} /></div></Link>   
+                    {/* <Link to={`/songs/${song.id}`} ><div className='image'><img src={song.photoUrl} /></div></Link>   
                     <ButtonContainer song={song} />
-                    <Link to={`/songs/${song.id}`}><div className='songname'>{song.title}</div></Link>
+                    <Link to={`/songs/${song.id}`}><div className='songname'>{song.title}</div></Link> */}
+                    {this.splashLink(song)}
                     {this.showLink()}
                     {/* <Link to={`/users/${song.artistId}`}><div className='artistname'>{users[song.artistId].username}</div></Link> */}
                     {/* <audio ref="audio_tag" src={song.soundUrl} controls/> */}

@@ -18,7 +18,7 @@ class Splash extends React.Component {
         let songs = this.props.songs.slice(0,12).map(el => {
             return (
                 <div key={el.id}>
-                    <SongIndexItem key={el.id} song={el} users={this.props.users} />
+                    <SongIndexItem key={el.id} path={this.props.location.pathname} song={el} users={this.props.users} />
                 </div>
             )
         });
