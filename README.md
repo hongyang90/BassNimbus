@@ -18,7 +18,7 @@ BassNimbus is a clone of the popular music web application Soundcloud. Users of 
 
 ### Audio Playback/ Continuous Music Player
 
-![picture2](https://user-images.githubusercontent.com/44389539/54500103-71be2a00-48d6-11e9-9cf3-2fff8ddf3cfe.png)
+![Screen Shot 2019-04-08 at 10 00 27 AM](https://user-images.githubusercontent.com/44389539/55742702-28e52700-59e5-11e9-8021-50eb4b0db6ac.png)
 
 The main feature of the website is the ability for users to select songs to play and listen to while browsing different pages of the site. Users are also able to control the play state by playing/pausing any selected song or by using the persistent music player. In order to implement this feature, a music slice of state was created in order to keep track of the information for the music player. In addition, the play/pause buttons on all of the pages and the music player are able to change the redux state.
 
