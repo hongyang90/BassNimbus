@@ -111,3 +111,6 @@ c12 = Comment.create(body: 'best song ever', song_id: song6.id, user_id: user4.i
 c13 = Comment.create(body: 'ayyyyy', song_id: song6.id, user_id: user3.id)
 c14 = Comment.create(body: 'such a great song', song_id: song9.id, user_id: user1.id)
 c15 = Comment.create(body: 'coool', song_id: song9.id, user_id: user2.id)
+c16 = Comment.create(body: 'coool', song_id: song10.id, user_id: user2.id)
+c17 = Comment.create(body: 'when did this come out?', song_id: song11.id, user_id: user2.id)
+c18 = Comment.create(body: 'love love love', song_id: song10.id, user_id: user3.id)
