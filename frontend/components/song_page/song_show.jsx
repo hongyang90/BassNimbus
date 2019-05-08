@@ -46,7 +46,7 @@ class SongShow extends React.Component {
         else {
             let artist = this.props.users[this.props.song.artistId];
             let currentUser = this.props.users[this.props.currentUserId];
-            let comments = this.props.comments.reverse();
+            let comments = this.props.comments;
 
             let mapped = comments.map(el => {
                 return (
